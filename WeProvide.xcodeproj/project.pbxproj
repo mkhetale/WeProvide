@@ -13,6 +13,10 @@
 		04674691260C532B00B396CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04674690260C532B00B396CB /* Assets.xcassets */; };
 		04674694260C532B00B396CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04674693260C532B00B396CB /* Preview Assets.xcassets */; };
 		04674697260C532B00B396CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04674695260C532B00B396CB /* LaunchScreen.storyboard */; };
+		046746A2260C538300B396CB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046746A1260C538300B396CB /* LoginView.swift */; };
+		046746A6260C539900B396CB /* SignupCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046746A5260C539900B396CB /* SignupCustomer.swift */; };
+		046746A9260C53AC00B396CB /* SignupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046746A8260C53AC00B396CB /* SignupProvider.swift */; };
+		046746AC260C543200B396CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 046746AB260C543200B396CB /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		04674693260C532B00B396CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		04674696260C532B00B396CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04674698260C532B00B396CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046746A1260C538300B396CB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		046746A5260C539900B396CB /* SignupCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupCustomer.swift; sourceTree = "<group>"; };
+		046746A8260C53AC00B396CB /* SignupProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProvider.swift; sourceTree = "<group>"; };
+		046746AB260C543200B396CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +64,12 @@
 		04674689260C532800B396CB /* WeProvide */ = {
 			isa = PBXGroup;
 			children = (
+				0467469F260C535E00B396CB /* Views */,
 				0467468A260C532800B396CB /* AppDelegate.swift */,
 				0467468C260C532800B396CB /* SceneDelegate.swift */,
-				0467468E260C532800B396CB /* ContentView.swift */,
 				04674690260C532B00B396CB /* Assets.xcassets */,
 				04674695260C532B00B396CB /* LaunchScreen.storyboard */,
+				046746AB260C543200B396CB /* GoogleService-Info.plist */,
 				04674698260C532B00B396CB /* Info.plist */,
 				04674692260C532B00B396CB /* Preview Content */,
 			);
@@ -73,6 +82,25 @@
 				04674693260C532B00B396CB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0467469F260C535E00B396CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				046746A0260C536D00B396CB /* Authentication */,
+				0467468E260C532800B396CB /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		046746A0260C536D00B396CB /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				046746A1260C538300B396CB /* LoginView.swift */,
+				046746A5260C539900B396CB /* SignupCustomer.swift */,
+				046746A8260C53AC00B396CB /* SignupProvider.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04674697260C532B00B396CB /* LaunchScreen.storyboard in Resources */,
+				046746AC260C543200B396CB /* GoogleService-Info.plist in Resources */,
 				04674694260C532B00B396CB /* Preview Assets.xcassets in Resources */,
 				04674691260C532B00B396CB /* Assets.xcassets in Resources */,
 			);
@@ -145,8 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046746A6260C539900B396CB /* SignupCustomer.swift in Sources */,
 				0467468B260C532800B396CB /* AppDelegate.swift in Sources */,
+				046746A9260C53AC00B396CB /* SignupProvider.swift in Sources */,
 				0467468D260C532800B396CB /* SceneDelegate.swift in Sources */,
+				046746A2260C538300B396CB /* LoginView.swift in Sources */,
 				0467468F260C532800B396CB /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
