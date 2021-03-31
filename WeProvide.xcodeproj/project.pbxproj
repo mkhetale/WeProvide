@@ -19,6 +19,7 @@
 		0486C0B4260C5BC200BA6DFE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0486C0B3260C5BC200BA6DFE /* GoogleService-Info.plist */; };
 		0486C0B8260C5C4C00BA6DFE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486C0B7260C5C4C00BA6DFE /* CustomTextField.swift */; };
 		0486C0BB260C640A00BA6DFE /* CustomPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486C0BA260C640A00BA6DFE /* CustomPasswordField.swift */; };
+		04AC5930261515BC00D4B78B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC592F261515BC00D4B78B /* ImagePicker.swift */; };
 		2BD4A10A3E16BBE3FB0437B6 /* Pods_WeProvide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E39F14AE4028F57C3E0770E /* Pods_WeProvide.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		0486C0B3260C5BC200BA6DFE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0486C0B7260C5C4C00BA6DFE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		0486C0BA260C640A00BA6DFE /* CustomPasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPasswordField.swift; sourceTree = "<group>"; };
+		04AC592F261515BC00D4B78B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		382A459279FFB958C4850D41 /* Pods-WeProvide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeProvide.debug.xcconfig"; path = "Target Support Files/Pods-WeProvide/Pods-WeProvide.debug.xcconfig"; sourceTree = "<group>"; };
 		3E39F14AE4028F57C3E0770E /* Pods_WeProvide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeProvide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD2258DF2C0BFD65F939F90 /* Pods-WeProvide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeProvide.release.xcconfig"; path = "Target Support Files/Pods-WeProvide/Pods-WeProvide.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,10 +120,19 @@
 		0486C0B6260C5C2F00BA6DFE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				04AC592E2615159E00D4B78B /* Views */,
 				0486C0B7260C5C4C00BA6DFE /* CustomTextField.swift */,
 				0486C0BA260C640A00BA6DFE /* CustomPasswordField.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		04AC592E2615159E00D4B78B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04AC592F261515BC00D4B78B /* ImagePicker.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		748AD2393864665DAAB9C87C /* Pods */ = {
@@ -259,6 +270,7 @@
 				0486C0B8260C5C4C00BA6DFE /* CustomTextField.swift in Sources */,
 				046746A6260C539900B396CB /* SignupCustomer.swift in Sources */,
 				0467468B260C532800B396CB /* AppDelegate.swift in Sources */,
+				04AC5930261515BC00D4B78B /* ImagePicker.swift in Sources */,
 				046746A9260C53AC00B396CB /* SignupProvider.swift in Sources */,
 				0467468D260C532800B396CB /* SceneDelegate.swift in Sources */,
 				046746A2260C538300B396CB /* LoginView.swift in Sources */,
