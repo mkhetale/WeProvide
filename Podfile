@@ -8,5 +8,7 @@ target 'WeProvide' do
   # Pods for WeProvide
 pod 'Firebase/Analytics'
 pod 'Firebase/Firestore'
+pod 'FirebaseUI/Auth'
+pod 'Firebase/Storage'
 
 end

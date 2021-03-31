@@ -15,6 +15,7 @@ struct SignupCustomer: View {
     @State var selectedUIImage: UIImage?
     @State var image: Image?
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @ObservedObject var viewModel = AuthModel()
     
     func loadImage() {
         guard let selectedImage = selectedUIImage else { return }
@@ -64,7 +65,7 @@ struct SignupCustomer: View {
                     .cornerRadius(10)
 //                    .padding()
                     .foregroundColor(.white)
-                CustomPasswordField(text: $email, placeholder: Text("Password"))
+                CustomPasswordField(text: $password, placeholder: Text("Password"))
                     .padding()
                     .background(Color(.init(white:1, alpha:0.15)))
                     .cornerRadius(10)
@@ -73,19 +74,10 @@ struct SignupCustomer: View {
             }
             .padding(.horizontal)
             
-            HStack {
-                Spacer()
-                Button(action: {}, label: {
-                    Text("Forgot Password?")
-                        .font(.footnote)
-                        .bold()
-                        .foregroundColor(.white)
-                        .padding(.top, 15)
-                        .padding(.trailing, 30)
-                })
-            }
-            
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: {
+                guard let image = selectedUIImage else { return }
+                viewModel.registerUser(email: email, password: password, fullName: fullName, profileImage: image)
+            }, label: {
                 Text("Sign Up")
                     .font(.headline)
                     .foregroundColor(Color(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)))
