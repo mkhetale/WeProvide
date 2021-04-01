@@ -9,8 +9,29 @@ import SwiftUI
 import Firebase
 
 class AuthModel: ObservableObject {
-    func login() {
-        
+    @Published var userSession: FirebaseAuth.User?
+    @Published var isAuthenticating = false
+    @Published var error: Error?
+    @Published var user: User?
+    
+    init() {
+        userSession = Auth.auth().currentUser
+    }
+    
+    func login(withEmail email:String, password:String) {
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            if let error = error {
+                print("DEBUG: Login Error \(error.localizedDescription)")
+                return
+            }
+            self.userSession = result?.user
+            print("DEBUG: Successfully logged in")
+        }
+    }
+    
+    func signOut() {
+        userSession = nil
+        try? Auth.auth().signOut()
     }
     
     func registerUser(email: String, password: String, fullName: String, profileImage: UIImage) {
@@ -27,6 +48,7 @@ class AuthModel: ObservableObject {
                 Auth.auth().createUser(withEmail: email, password: password) { result, error in
                     if let error = error {
                         print("DEBUG: Error \(error.localizedDescription)")
+                        return
                     }
                     guard let user = result?.user else { return }
                     let data = ["email": email,
