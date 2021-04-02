@@ -24,6 +24,7 @@ struct CustomTextField: View {
                     .scaledToFit()
                     .frame(width: 20, height: 20)
                 TextField("", text: $text )
+                    .disableAutocorrection(true)
             }
         }
     }

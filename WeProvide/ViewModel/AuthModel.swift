@@ -16,6 +16,7 @@ class AuthModel: ObservableObject {
     
     init() {
         userSession = Auth.auth().currentUser
+        fetchUser()
     }
     
     func login(withEmail email:String, password:String) {
@@ -32,6 +33,20 @@ class AuthModel: ObservableObject {
     func signOut() {
         userSession = nil
         try? Auth.auth().signOut()
+    }
+    
+    func fetchUser() {
+        guard let uid = userSession?.uid else { return }
+        print("DEBUG\(uid)")
+        Firestore.firestore().collection("users").document(uid).getDocument { result, error in
+            if let error = error {
+                print("Failed to fetch data \(error.localizedDescription)")
+                return
+            }
+            guard let data = result?.data() else { return }
+            let user = User(dictionary: data)
+            print("DEBUG: User name \(user)")
+        }
     }
     
     func registerUser(email: String, password: String, fullName: String, profileImage: UIImage) {
@@ -58,7 +73,7 @@ class AuthModel: ObservableObject {
                     ]
                     Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
                         print("DEBUG: Successfully uploaded user data")
-                        
+                        self.userSession = user
                     }
                     
         //            print("DEBUG: User sign up successful")
