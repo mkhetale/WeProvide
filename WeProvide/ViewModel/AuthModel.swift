@@ -27,6 +27,8 @@ class AuthModel: ObservableObject {
             }
             self.userSession = result?.user
             print("DEBUG: Successfully logged in")
+//            print(self.userSession)
+            self.fetchUser()
         }
     }
     
@@ -37,7 +39,7 @@ class AuthModel: ObservableObject {
     
     func fetchUser() {
         guard let uid = userSession?.uid else { return }
-        print("DEBUG\(uid)")
+//        print("DEBUG\(uid)")
         Firestore.firestore().collection("users").document(uid).getDocument { result, error in
             if let error = error {
                 print("Failed to fetch data \(error.localizedDescription)")
@@ -69,7 +71,7 @@ class AuthModel: ObservableObject {
                     let data = ["email": email,
                                 "fullName": fullName,
                                 "profileImageUrl": profileImageUrl,
-                                "userId": user.uid
+                                "id": user.uid
                     ]
                     Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
                         print("DEBUG: Successfully uploaded user data")

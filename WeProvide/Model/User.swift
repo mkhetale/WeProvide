@@ -16,10 +16,10 @@ struct User: Identifiable {
     var isCurrentUser: Bool { return Auth.auth().currentUser?.uid == self.id }
     
     init(dictionary: [String: Any]) {
-        self.id = dictionary["uid"] as? String ?? ""
+        self.id = dictionary["id"] as? String ?? ""
         self.profileImageUrl = dictionary["profileImageUrl"] as? String ?? ""
         self.email = dictionary["email"] as? String ?? ""
-        self.fullName = dictionary["fullname"] as? String ?? ""
+        self.fullName = dictionary["fullName"] as? String ?? ""
     }
 }
 

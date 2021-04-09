@@ -26,6 +26,7 @@
 		04AC595C2616685500D4B78B /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC595B2616685500D4B78B /* ListCell.swift */; };
 		04AC595F2616861D00D4B78B /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC595E2616861C00D4B78B /* UserProfile.swift */; };
 		04AC596326168A1C00D4B78B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC596226168A1C00D4B78B /* User.swift */; };
+		04AC597F261FC28D00D4B78B /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC597E261FC28D00D4B78B /* Quote.swift */; };
 		2BD4A10A3E16BBE3FB0437B6 /* Pods_WeProvide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E39F14AE4028F57C3E0770E /* Pods_WeProvide.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		04AC595B2616685500D4B78B /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		04AC595E2616861C00D4B78B /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		04AC596226168A1C00D4B78B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		04AC597E261FC28D00D4B78B /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		382A459279FFB958C4850D41 /* Pods-WeProvide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeProvide.debug.xcconfig"; path = "Target Support Files/Pods-WeProvide/Pods-WeProvide.debug.xcconfig"; sourceTree = "<group>"; };
 		3E39F14AE4028F57C3E0770E /* Pods_WeProvide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeProvide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD2258DF2C0BFD65F939F90 /* Pods-WeProvide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeProvide.release.xcconfig"; path = "Target Support Files/Pods-WeProvide/Pods-WeProvide.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				04AC5953261566B400D4B78B /* FeedView.swift */,
 				04AC595E2616861C00D4B78B /* UserProfile.swift */,
+				04AC597E261FC28D00D4B78B /* Quote.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				046746A6260C539900B396CB /* SignupCustomer.swift in Sources */,
 				04AC595F2616861D00D4B78B /* UserProfile.swift in Sources */,
 				0467468B260C532800B396CB /* AppDelegate.swift in Sources */,
+				04AC597F261FC28D00D4B78B /* Quote.swift in Sources */,
 				04AC5954261566B400D4B78B /* FeedView.swift in Sources */,
 				04AC5930261515BC00D4B78B /* ImagePicker.swift in Sources */,
 				04AC595C2616685500D4B78B /* ListCell.swift in Sources */,
