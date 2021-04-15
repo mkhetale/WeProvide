@@ -78,7 +78,7 @@ struct SignupCustomer: View {
                 guard let image = selectedUIImage else { return }
                 viewModel.registerUser(email: email, password: password, fullName: fullName, profileImage: image)
             }, label: {
-                Text("Sign Up")
+                Text("Sign Up as Customer")
                     .font(.headline)
                     .foregroundColor(Color(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)))
                     .frame(width: 360, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
@@ -86,19 +86,20 @@ struct SignupCustomer: View {
                     .cornerRadius(25)
                     .padding()
             })
-            Spacer()
+//            Spacer()
             
-                Button(action: { mode.wrappedValue.dismiss() }, label: {
-                    HStack {
-                        Text("Already have an account?")
-                            .font(.system(size: 14))
-                        
-                        Text("Sign In")
-                            .font(.system(size: 14, weight: .semibold))
-                    }
-                    .foregroundColor(.white)
-                    .padding(.bottom, 40)
-                })
+//                Button(action: { mode.wrappedValue.dismiss() }, label: {
+//                    HStack {
+//                        Text("Already have an account?")
+//                            .font(.system(size: 14))
+//                        
+//                        Text("Sign In")
+//                            .font(.system(size: 14, weight: .semibold))
+//                    }
+//                    .foregroundColor(.white)
+//                    .padding(.bottom, 40)
+//                })
+                Spacer()
             
             }
             

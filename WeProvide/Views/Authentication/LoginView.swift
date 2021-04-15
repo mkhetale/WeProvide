@@ -65,7 +65,7 @@ struct LoginView: View {
                 Spacer()
                 
                 NavigationLink(
-                    destination: SignupCustomer().navigationBarBackButtonHidden(true),
+                    destination: SelectUserType(),
                     label: {
                         HStack {
                             Text("Don't have an account?")
@@ -74,7 +74,7 @@ struct LoginView: View {
                                 .font(.system(size:14, weight: .semibold))
                         }
                         .foregroundColor(.white)
-                        .padding()
+                        .padding(.bottom, 40)
                     })
                 
                 
@@ -84,6 +84,7 @@ struct LoginView: View {
             .background(Color(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)))
             .ignoresSafeArea()
         }
+        .accentColor( .white)
     }
 }
 
