@@ -84,6 +84,7 @@ struct SignupCustomer: View {
                     .frame(width: 360, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .background(Color.white)
                     .cornerRadius(25)
+                    .padding(.top, 50)
                     .padding()
             })
 //            Spacer()

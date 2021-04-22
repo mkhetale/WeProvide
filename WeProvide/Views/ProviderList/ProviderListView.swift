@@ -33,7 +33,7 @@ struct ProviderListView: View {
             .background(Color(.systemBlue))
             .foregroundColor(.white)
             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-//            .padding()
+            .padding()
         }
     }
 }

@@ -14,6 +14,7 @@ struct SignupProvider: View {
     @State var showImagePicker = false
     @State var selectedUIImage: UIImage?
     @State var image: Image?
+    @State var services: [String] = ["Electrician","Plumber","Carpenter"]
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @EnvironmentObject var viewModel: AuthModel
     
@@ -71,6 +72,10 @@ struct SignupProvider: View {
                     .cornerRadius(10)
 //                    .padding()
                     .foregroundColor(.white)
+//                HStack {
+//                    ForEach(
+//                    CustomCheckBox
+//                }
             }
             .padding(.horizontal)
             
@@ -84,6 +89,7 @@ struct SignupProvider: View {
                     .frame(width: 360, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .background(Color.white)
                     .cornerRadius(25)
+                    .padding(.top, 50)
                     .padding()
             })
             
