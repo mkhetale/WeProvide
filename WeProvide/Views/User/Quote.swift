@@ -25,6 +25,7 @@ struct Quote: View {
                 .padding(.bottom)
                 .padding(.trailing)
             }
+            .padding(.horizontal)
             HStack {
 //                Text("$$")
 //                    .padding()

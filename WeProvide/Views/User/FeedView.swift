@@ -11,6 +11,7 @@ struct FeedView: View {
 
     var body: some View {
         VStack {
+            Text("User")
             UserProfile()
             ProviderListView()
         }

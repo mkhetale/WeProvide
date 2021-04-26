@@ -6,21 +6,23 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ListCell: View {
+    let provider: User
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .top, spacing: 12) {
-                Image("batman")
+                KFImage(URL(string: provider.profileImageUrl))
                     .resizable()
                     .scaledToFill()
                     .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                     .frame(width: 70, height: 70)
                 VStack(alignment: .leading) {
-                    Text("Bruce Wayne")
+                    Text(provider.fullName)
                         .font(.system(size:14, weight: .semibold))
                     
-                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.")
+                    Text(provider.description)
                 }
                 .padding(.bottom)
                 .padding(.trailing)
@@ -44,8 +46,8 @@ struct ListCell: View {
     }
 }
 
-struct ListCell_Previews: PreviewProvider {
-    static var previews: some View {
-        ListCell()
-    }
-}
+//struct ListCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ListCell()
+//    }
+//}

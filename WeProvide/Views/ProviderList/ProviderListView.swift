@@ -10,13 +10,14 @@ import SwiftUI
 
 struct ProviderListView: View {
     @EnvironmentObject var viewModel: AuthModel
+    @ObservedObject var viewObj = SearchViewModel()
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             ScrollView {
                 VStack {
-                    ForEach(0..<20) { _ in
-                        ListCell()
+                    ForEach(viewObj.providers) { provider in
+                        ListCell(provider: provider)
                     }
                 }
                 .padding()

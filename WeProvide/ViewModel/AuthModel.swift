@@ -27,7 +27,7 @@ class AuthModel: ObservableObject {
             }
             self.userSession = result?.user
             print("DEBUG: Successfully logged in")
-//            print(self.userSession)
+            print(self.userSession!)
             self.fetchUser()
         }
     }
@@ -46,8 +46,9 @@ class AuthModel: ObservableObject {
                 return
             }
             guard let data = result?.data() else { return }
+            print("test \(data)")
             let user = User(dictionary: data)
-            print("DEBUG: User name \(user)")
+            print("DEBUG: User name \(user.type)")
         }
     }
     
@@ -71,6 +72,7 @@ class AuthModel: ObservableObject {
                     let data = ["email": email,
                                 "fullName": fullName,
                                 "profileImageUrl": profileImageUrl,
+                                "type": "user",
                                 "id": user.uid
                     ]
                     Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
@@ -86,7 +88,7 @@ class AuthModel: ObservableObject {
         }
         
     }
-    func registerProvider(email: String, password: String, fullName: String, profileImage: UIImage) {
+    func registerProvider(email: String, password: String, fullName: String, profileImage: UIImage, description: String) {
         guard let imageData = profileImage.jpegData(compressionQuality: 0.3) else { return }
         let filename = NSUUID().uuidString
         let storageRef = Storage.storage().reference().child(filename)
@@ -107,6 +109,7 @@ class AuthModel: ObservableObject {
                                 "fullName": fullName,
                                 "profileImageUrl": profileImageUrl,
                                 "type": "provider",
+                                "description": description,
                                 "id": user.uid
                     ]
                     Firestore.firestore().collection("providers").document(user.uid).setData(data) { _ in

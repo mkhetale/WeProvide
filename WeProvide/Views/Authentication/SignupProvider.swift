@@ -11,6 +11,8 @@ struct SignupProvider: View {
     @State var email = ""
     @State var password = ""
     @State var fullName = ""
+    @State var description = ""
+    @State private var fullText: String = "This is some editable text..."
     @State var showImagePicker = false
     @State var selectedUIImage: UIImage?
     @State var image: Image?
@@ -32,8 +34,7 @@ struct SignupProvider: View {
                             image
                                 .resizable()
                                 .scaledToFill()
-                                .clipped()
-                                .cornerRadius(70)
+                                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                                 .frame(width: 140, height: 140)
                                 .padding(.top, 88)
                                 .padding(.bottom, 16)
@@ -66,12 +67,28 @@ struct SignupProvider: View {
                     .cornerRadius(10)
 //                    .padding()
                     .foregroundColor(.white)
+                CustomTextField(text: $description, placeholder: Text("Services Provided?"), imageName: "wrench")
+                    .padding()
+                    .background(Color(.init(white:1, alpha:0.15)))
+                    .cornerRadius(10)
+//                    .padding()
+                    .foregroundColor(.white)
                 CustomPasswordField(text: $password, placeholder: Text("Password"))
                     .padding()
                     .background(Color(.init(white:1, alpha:0.15)))
                     .cornerRadius(10)
 //                    .padding()
                     .foregroundColor(.white)
+//                HStack {
+//                    Text("Description")
+//                        .foregroundColor(.white)
+//                    Spacer()
+//                }
+//                TextEditor(text: $fullText)
+//                    .foregroundColor(Color.gray)
+//                    .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+//                    .font(.custom("HelveticaNeue", size: 13))
+//                    .padding(.top, -10)
 //                HStack {
 //                    ForEach(
 //                    CustomCheckBox
@@ -81,7 +98,7 @@ struct SignupProvider: View {
             
             Button(action: {
                 guard let image = selectedUIImage else { return }
-                viewModel.registerProvider(email: email, password: password, fullName: fullName, profileImage: image)
+                viewModel.registerProvider(email: email, password: password, fullName: fullName, profileImage: image, description: description)
             }, label: {
                 Text("Sign Up as Service provider")
                     .font(.headline)

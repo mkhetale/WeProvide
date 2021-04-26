@@ -31,8 +31,8 @@ struct SignupCustomer: View {
                             image
                                 .resizable()
                                 .scaledToFill()
-                                .clipped()
-                                .cornerRadius(70)
+                                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+//                                .cornerRadius(70)
                                 .frame(width: 140, height: 140)
                                 .padding(.top, 88)
                                 .padding(.bottom, 16)
