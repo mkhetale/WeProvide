@@ -44,6 +44,7 @@
 		04F1DB9026329D5A009ADAE5 /* FeedProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DB8F26329D5A009ADAE5 /* FeedProviderView.swift */; };
 		04F1DBAC26375141009ADAE5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DBAB26375141009ADAE5 /* Constants.swift */; };
 		04F1DBAF263768A6009ADAE5 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DBAE263768A6009ADAE5 /* SearchViewModel.swift */; };
+		04F1DBB32637CFC2009ADAE5 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DBB22637CFC2009ADAE5 /* SideBarView.swift */; };
 		2BD4A10A3E16BBE3FB0437B6 /* Pods_WeProvide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E39F14AE4028F57C3E0770E /* Pods_WeProvide.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		04F1DB8F26329D5A009ADAE5 /* FeedProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedProviderView.swift; sourceTree = "<group>"; };
 		04F1DBAB26375141009ADAE5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04F1DBAE263768A6009ADAE5 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		04F1DBB22637CFC2009ADAE5 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		382A459279FFB958C4850D41 /* Pods-WeProvide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeProvide.debug.xcconfig"; path = "Target Support Files/Pods-WeProvide/Pods-WeProvide.debug.xcconfig"; sourceTree = "<group>"; };
 		3E39F14AE4028F57C3E0770E /* Pods_WeProvide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeProvide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD2258DF2C0BFD65F939F90 /* Pods-WeProvide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeProvide.release.xcconfig"; path = "Target Support Files/Pods-WeProvide/Pods-WeProvide.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		0467469F260C535E00B396CB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				04F1DBB12637CFB0009ADAE5 /* SideBar */,
 				04F1DB6C2631D516009ADAE5 /* ChatFramework */,
 				04AC59522615669800D4B78B /* User */,
 				04AC59322615242F00D4B78B /* ProviderList */,
@@ -245,6 +248,14 @@
 				04F1DB8C2632487F009ADAE5 /* NewMessageView.swift */,
 			);
 			path = ChatFramework;
+			sourceTree = "<group>";
+		};
+		04F1DBB12637CFB0009ADAE5 /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				04F1DBB22637CFC2009ADAE5 /* SideBarView.swift */,
+			);
+			path = SideBar;
 			sourceTree = "<group>";
 		};
 		748AD2393864665DAAB9C87C /* Pods */ = {
@@ -428,6 +439,7 @@
 				04AC5959261663F900D4B78B /* ProviderListView.swift in Sources */,
 				04F1DB7E26320E1E009ADAE5 /* MessageInputView.swift in Sources */,
 				04F1DB66262917D5009ADAE5 /* CustomCheckBox.swift in Sources */,
+				04F1DBB32637CFC2009ADAE5 /* SideBarView.swift in Sources */,
 				04F1DB6E2631D54B009ADAE5 /* ConversationView.swift in Sources */,
 				04F1DB722631D558009ADAE5 /* ConversationCell.swift in Sources */,
 			);

@@ -6,22 +6,23 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct UserProfile: View {
+@EnvironmentObject var viewModel: AuthModel
     var body: some View {
         VStack {
-            Image("batman")
+            KFImage(URL(string: self.viewModel.profileImageUrl))
                 .resizable()
                 .scaledToFill()
-                .clipped()
-                .cornerRadius(70)
+                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                 .frame(width: 140, height: 140)
 //                .padding(.top, 88)
                 .padding(.bottom, 16)
                 .shadow(color: .black, radius: 5)
-            Text("Full name")
+            Text( self.viewModel.fullName)
                 .font(.system(size:20, weight: .semibold))
-            Text("test@test.com")
+            Text(self.viewModel.email)
                 .font(.subheadline)
 //            Spacer()
         }

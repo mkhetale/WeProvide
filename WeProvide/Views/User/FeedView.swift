@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct FeedView: View {
-
+@EnvironmentObject var viewModel: AuthModel
     var body: some View {
-        VStack {
-            Text("User")
-            UserProfile()
-            ProviderListView()
+        if viewModel.userType == "user" {
+            VStack {
+                Text("User")
+                UserProfile()
+                ProviderListView()
+            }
+        } else {
+            VStack {
+                Text("test")
+                UserProfile()
+                ProviderListView()
+            }
         }
+        
     }
 }
 

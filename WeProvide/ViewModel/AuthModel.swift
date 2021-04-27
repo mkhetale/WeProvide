@@ -12,7 +12,14 @@ class AuthModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var isAuthenticating = false
     @Published var error: Error?
-    @Published var user: User?
+    //@Published var user: FirebaseAuth.User?
+    @Published var userType = ""
+//    @Published var userData = [User]()
+    @Published var fullName = ""
+    @Published var email = ""
+    @Published var description = ""
+    @Published var profileImageUrl = ""
+    @Published var id = ""
     
     init() {
         userSession = Auth.auth().currentUser
@@ -27,7 +34,10 @@ class AuthModel: ObservableObject {
             }
             self.userSession = result?.user
             print("DEBUG: Successfully logged in")
-            print(self.userSession!)
+//            let currentUser = self.userSession
+            print("testing")
+//            print(currentUser)
+            //self.userData = currentUser as? User
             self.fetchUser()
         }
     }
@@ -48,7 +58,15 @@ class AuthModel: ObservableObject {
             guard let data = result?.data() else { return }
             print("test \(data)")
             let user = User(dictionary: data)
+            self.userType = user.type
+            self.fullName = user.fullName
+            self.description = user.description
+            self.email = user.email
+            self.id = user.id
+            self.profileImageUrl = user.profileImageUrl
+//            self.userData.append(user)
             print("DEBUG: User name \(user.type)")
+//            print("DEBUG: User name \(String(describing: self.userData.first!.fullName))")
         }
     }
     
