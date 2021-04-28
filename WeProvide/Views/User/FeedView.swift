@@ -12,9 +12,12 @@ struct FeedView: View {
     var body: some View {
         if viewModel.userType == "user" {
             VStack {
-                Text("User")
+//                Text("User")
+//                SideBarView()
                 UserProfile()
+//                    .padding(.top, -200)
                 ProviderListView()
+//                Spacer()
             }
         } else {
             VStack {

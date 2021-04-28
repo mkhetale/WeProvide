@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0403C97F2638C0E4009B3371 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403C97E2638C0E4009B3371 /* QuoteView.swift */; };
+		0403C9822638F658009B3371 /* TestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403C9812638F658009B3371 /* TestingView.swift */; };
 		0467468B260C532800B396CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467468A260C532800B396CB /* AppDelegate.swift */; };
 		0467468D260C532800B396CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467468C260C532800B396CB /* SceneDelegate.swift */; };
 		0467468F260C532800B396CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467468E260C532800B396CB /* ContentView.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0403C97E2638C0E4009B3371 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
+		0403C9812638F658009B3371 /* TestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingView.swift; sourceTree = "<group>"; };
 		04674687260C532800B396CB /* WeProvide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeProvide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0467468A260C532800B396CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0467468C260C532800B396CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0403C97D2638C0CB009B3371 /* Quote */ = {
+			isa = PBXGroup;
+			children = (
+				0403C97E2638C0E4009B3371 /* QuoteView.swift */,
+				0403C9812638F658009B3371 /* TestingView.swift */,
+			);
+			path = Quote;
+			sourceTree = "<group>";
+		};
 		0467467E260C532800B396CB = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +166,7 @@
 		0467469F260C535E00B396CB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0403C97D2638C0CB009B3371 /* Quote */,
 				04F1DBB12637CFB0009ADAE5 /* SideBar */,
 				04F1DB6C2631D516009ADAE5 /* ChatFramework */,
 				04AC59522615669800D4B78B /* User */,
@@ -413,12 +427,14 @@
 				046746A6260C539900B396CB /* SignupCustomer.swift in Sources */,
 				04F1DB8A26324721009ADAE5 /* MessageView.swift in Sources */,
 				04AC595F2616861D00D4B78B /* UserProfile.swift in Sources */,
+				0403C9822638F658009B3371 /* TestingView.swift in Sources */,
 				0467468B260C532800B396CB /* AppDelegate.swift in Sources */,
 				04AC597F261FC28D00D4B78B /* Quote.swift in Sources */,
 				04AC5954261566B400D4B78B /* FeedView.swift in Sources */,
 				04F1DBAC26375141009ADAE5 /* Constants.swift in Sources */,
 				04F1DB8126321595009ADAE5 /* ChatView.swift in Sources */,
 				04F1DB6A26292178009ADAE5 /* TestCheckbox.swift in Sources */,
+				0403C97F2638C0E4009B3371 /* QuoteView.swift in Sources */,
 				04F1DB8D2632487F009ADAE5 /* NewMessageView.swift in Sources */,
 				04AC5930261515BC00D4B78B /* ImagePicker.swift in Sources */,
 				04F1DB7B26320674009ADAE5 /* UserCell.swift in Sources */,

@@ -1,0 +1,66 @@
+//
+//  QuoteView.swift
+//  WeProvide
+//
+//  Created by Mihir Khetale on 4/27/21.
+//
+
+import SwiftUI
+import Kingfisher
+
+struct QuoteView: View {
+    @State var description = ""
+    @Binding var show: Bool
+    @Binding var provider: User
+    var body: some View {
+        VStack {
+            KFImage(URL(string: provider.profileImageUrl))
+                .resizable()
+                .scaledToFill()
+                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                .frame(width: 140, height: 140)
+//                .padding(.top, 88)
+                .padding(.bottom, 16)
+                .shadow(color: .black, radius: 5)
+                .padding(.top,20)
+            Text( provider.fullName)
+                .font(.system(size:20, weight: .semibold))
+            Text(provider.email)
+                .font(.subheadline)
+            Text(provider.description)
+                .font(.subheadline)
+            Text("Enter Description of the task")
+                .padding(.top,30)
+            TextEditor(text: $description)
+                .foregroundColor(.black)
+//                .padding(.top, 30)
+                .frame(width: 350, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+//            CustomTextField(text: $description, placeholder: Text("Enter Description of task"), imageName: "square.and.pencil")
+//                .padding()
+//                .background(Color(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)))
+//                .cornerRadius(10)
+//                .padding()
+//                .foregroundColor(.black)
+            Button(action: {
+                show.toggle()
+            }, label: {
+                Text("Working")
+            })
+            Spacer()
+        }
+//        VStack {
+//            Button(action: {
+//                show.toggle()
+//            }, label: {
+//                Text("Working")
+//            })
+//        }
+    }
+}
+
+//struct QuoteView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        QuoteView(show: .constant(true))
+//    }
+//}

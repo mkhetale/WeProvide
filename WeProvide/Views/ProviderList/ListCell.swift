@@ -9,7 +9,8 @@ import SwiftUI
 import Kingfisher
 
 struct ListCell: View {
-    let provider: User
+    @State var isShowingQuoteView = false
+    @State var provider: User
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .top, spacing: 12) {
@@ -31,7 +32,9 @@ struct ListCell: View {
 //                Text("$$")
 //                    .padding()
                 Spacer()
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: {
+                    isShowingQuoteView.toggle()
+                }, label: {
                     Text("Get a quote")
                 })
                 .font(.headline)
@@ -40,6 +43,9 @@ struct ListCell: View {
                 .background(Color.white)
                 .cornerRadius(25)
                 .padding(.horizontal)
+                .sheet(isPresented: $isShowingQuoteView, content: {
+                    QuoteView(show: $isShowingQuoteView, provider: $provider)
+                })
             }
            Divider()
         }
