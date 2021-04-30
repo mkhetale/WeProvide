@@ -58,8 +58,8 @@ struct Home: View {
                 .background(Color.white)
                 .shadow(color: Color/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.1), radius: 5, x: 0, y: 5)
                 Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
-                UserProfile()
-                ProviderListView()
+//                UserProfile()
+//                ProviderListView()
 //                Text(selectedIndex)
 //                Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                 
