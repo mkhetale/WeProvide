@@ -13,7 +13,7 @@ struct ContentView: View {
         Group {
             if viewModel.userSession != nil {
                 NavigationView {
-                    SideBarView()
+                    FeedView()
                     TabView {
                         FeedView()
                             .tabItem {
@@ -31,8 +31,8 @@ struct ContentView: View {
                                 Text("Messages")
                             }
                     }
-//                    .navigationBarTitle("Home")
-//                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarTitle("Home")
+                    .navigationBarTitleDisplayMode(.inline)
                 }
             } else {
                 LoginView()
