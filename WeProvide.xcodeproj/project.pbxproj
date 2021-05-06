@@ -18,6 +18,11 @@
 		046746A2260C538300B396CB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046746A1260C538300B396CB /* LoginView.swift */; };
 		046746A6260C539900B396CB /* SignupCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046746A5260C539900B396CB /* SignupCustomer.swift */; };
 		046746A9260C53AC00B396CB /* SignupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046746A8260C53AC00B396CB /* SignupProvider.swift */; };
+		047513312640A578003CD344 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047513302640A578003CD344 /* ChatViewModel.swift */; };
+		047513342640AD5F003CD344 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047513332640AD5F003CD344 /* ProfileViewModel.swift */; };
+		047513372643798A003CD344 /* ProviderSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047513362643798A003CD344 /* ProviderSearchView.swift */; };
+		0475133A26437B2C003CD344 /* UserChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475133926437B2C003CD344 /* UserChatView.swift */; };
+		0475133D26437D91003CD344 /* UserMessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475133C26437D91003CD344 /* UserMessageInputView.swift */; };
 		0486C0B4260C5BC200BA6DFE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0486C0B3260C5BC200BA6DFE /* GoogleService-Info.plist */; };
 		0486C0B8260C5C4C00BA6DFE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486C0B7260C5C4C00BA6DFE /* CustomTextField.swift */; };
 		0486C0BB260C640A00BA6DFE /* CustomPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486C0BA260C640A00BA6DFE /* CustomPasswordField.swift */; };
@@ -30,8 +35,6 @@
 		04AC596326168A1C00D4B78B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC596226168A1C00D4B78B /* User.swift */; };
 		04AC597F261FC28D00D4B78B /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC597E261FC28D00D4B78B /* Quote.swift */; };
 		04AC5983262663AA00D4B78B /* SelectUserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC5982262663AA00D4B78B /* SelectUserType.swift */; };
-		04F1DB66262917D5009ADAE5 /* CustomCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DB65262917D5009ADAE5 /* CustomCheckBox.swift */; };
-		04F1DB6A26292178009ADAE5 /* TestCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DB6926292178009ADAE5 /* TestCheckbox.swift */; };
 		04F1DB6E2631D54B009ADAE5 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DB6D2631D54B009ADAE5 /* ConversationView.swift */; };
 		04F1DB722631D558009ADAE5 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DB712631D558009ADAE5 /* ConversationCell.swift */; };
 		04F1DB752631FDB3009ADAE5 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DB742631FDB3009ADAE5 /* SearchView.swift */; };
@@ -64,6 +67,11 @@
 		046746A1260C538300B396CB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		046746A5260C539900B396CB /* SignupCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupCustomer.swift; sourceTree = "<group>"; };
 		046746A8260C53AC00B396CB /* SignupProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProvider.swift; sourceTree = "<group>"; };
+		047513302640A578003CD344 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		047513332640AD5F003CD344 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		047513362643798A003CD344 /* ProviderSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderSearchView.swift; sourceTree = "<group>"; };
+		0475133926437B2C003CD344 /* UserChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChatView.swift; sourceTree = "<group>"; };
+		0475133C26437D91003CD344 /* UserMessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessageInputView.swift; sourceTree = "<group>"; };
 		0486C0B3260C5BC200BA6DFE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0486C0B7260C5C4C00BA6DFE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		0486C0BA260C640A00BA6DFE /* CustomPasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPasswordField.swift; sourceTree = "<group>"; };
@@ -76,8 +84,6 @@
 		04AC596226168A1C00D4B78B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		04AC597E261FC28D00D4B78B /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		04AC5982262663AA00D4B78B /* SelectUserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUserType.swift; sourceTree = "<group>"; };
-		04F1DB65262917D5009ADAE5 /* CustomCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCheckBox.swift; sourceTree = "<group>"; };
-		04F1DB6926292178009ADAE5 /* TestCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCheckbox.swift; sourceTree = "<group>"; };
 		04F1DB6D2631D54B009ADAE5 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		04F1DB712631D558009ADAE5 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		04F1DB742631FDB3009ADAE5 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -193,9 +199,7 @@
 			children = (
 				04AC592E2615159E00D4B78B /* Views */,
 				0486C0B7260C5C4C00BA6DFE /* CustomTextField.swift */,
-				04F1DB65262917D5009ADAE5 /* CustomCheckBox.swift */,
 				0486C0BA260C640A00BA6DFE /* CustomPasswordField.swift */,
-				04F1DB6926292178009ADAE5 /* TestCheckbox.swift */,
 				04F1DBAB26375141009ADAE5 /* Constants.swift */,
 			);
 			path = Utils;
@@ -223,6 +227,8 @@
 			children = (
 				04AC594F2615294E00D4B78B /* AuthModel.swift */,
 				04F1DBAE263768A6009ADAE5 /* SearchViewModel.swift */,
+				047513302640A578003CD344 /* ChatViewModel.swift */,
+				047513332640AD5F003CD344 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -234,6 +240,9 @@
 				04AC595E2616861C00D4B78B /* UserProfile.swift */,
 				04AC597E261FC28D00D4B78B /* Quote.swift */,
 				04F1DB8F26329D5A009ADAE5 /* FeedProviderView.swift */,
+				047513362643798A003CD344 /* ProviderSearchView.swift */,
+				0475133926437B2C003CD344 /* UserChatView.swift */,
+				0475133C26437D91003CD344 /* UserMessageInputView.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -430,13 +439,15 @@
 				0403C9822638F658009B3371 /* TestingView.swift in Sources */,
 				0467468B260C532800B396CB /* AppDelegate.swift in Sources */,
 				04AC597F261FC28D00D4B78B /* Quote.swift in Sources */,
+				047513312640A578003CD344 /* ChatViewModel.swift in Sources */,
 				04AC5954261566B400D4B78B /* FeedView.swift in Sources */,
 				04F1DBAC26375141009ADAE5 /* Constants.swift in Sources */,
 				04F1DB8126321595009ADAE5 /* ChatView.swift in Sources */,
-				04F1DB6A26292178009ADAE5 /* TestCheckbox.swift in Sources */,
 				0403C97F2638C0E4009B3371 /* QuoteView.swift in Sources */,
 				04F1DB8D2632487F009ADAE5 /* NewMessageView.swift in Sources */,
 				04AC5930261515BC00D4B78B /* ImagePicker.swift in Sources */,
+				0475133A26437B2C003CD344 /* UserChatView.swift in Sources */,
+				047513372643798A003CD344 /* ProviderSearchView.swift in Sources */,
 				04F1DB7B26320674009ADAE5 /* UserCell.swift in Sources */,
 				04AC595C2616685500D4B78B /* ListCell.swift in Sources */,
 				046746A9260C53AC00B396CB /* SignupProvider.swift in Sources */,
@@ -447,14 +458,15 @@
 				04AC5983262663AA00D4B78B /* SelectUserType.swift in Sources */,
 				04F1DB9026329D5A009ADAE5 /* FeedProviderView.swift in Sources */,
 				04F1DB8426321762009ADAE5 /* ChatBubble.swift in Sources */,
+				0475133D26437D91003CD344 /* UserMessageInputView.swift in Sources */,
 				046746A2260C538300B396CB /* LoginView.swift in Sources */,
 				0486C0BB260C640A00BA6DFE /* CustomPasswordField.swift in Sources */,
 				04F1DB782631FDCD009ADAE5 /* SearchBar.swift in Sources */,
 				0467468F260C532800B396CB /* ContentView.swift in Sources */,
 				04AC59502615294E00D4B78B /* AuthModel.swift in Sources */,
+				047513342640AD5F003CD344 /* ProfileViewModel.swift in Sources */,
 				04AC5959261663F900D4B78B /* ProviderListView.swift in Sources */,
 				04F1DB7E26320E1E009ADAE5 /* MessageInputView.swift in Sources */,
-				04F1DB66262917D5009ADAE5 /* CustomCheckBox.swift in Sources */,
 				04F1DBB32637CFC2009ADAE5 /* SideBarView.swift in Sources */,
 				04F1DB6E2631D54B009ADAE5 /* ConversationView.swift in Sources */,
 				04F1DB722631D558009ADAE5 /* ConversationCell.swift in Sources */,
