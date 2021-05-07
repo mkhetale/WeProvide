@@ -6,21 +6,24 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ConversationCell: View {
+    let message: Message
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .top, spacing: 12) {
-                Image("batman")
+//                Image("batman")
+                KFImage(URL(string: message.user.profileImageUrl))
                     .resizable()
                     .scaledToFill()
                     .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                     .frame(width: 70, height: 70)
                 VStack(alignment: .leading) {
-                    Text("Bruce Wayne")
+                    Text(message.user.fullName)
                         .font(.system(size:14, weight: .semibold))
                     
-                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.")
+                    Text(message.text)
                 }
 //                .padding(.bottom)
                 .foregroundColor(.black)
@@ -31,8 +34,8 @@ struct ConversationCell: View {
     }
 }
 
-struct ConversationCell_Previews: PreviewProvider {
-    static var previews: some View {
-        ConversationCell()
-    }
-}
+//struct ConversationCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ConversationCell()
+//    }
+//}

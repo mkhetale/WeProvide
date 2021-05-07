@@ -35,7 +35,7 @@ class AuthModel: ObservableObject {
             self.userSession = result?.user
             print("DEBUG: Successfully logged in")
 //            let currentUser = self.userSession
-            print("testing")
+//            print("testing")
 //            print(currentUser)
             //self.userData = currentUser as? User
             self.fetchUser()
@@ -56,7 +56,7 @@ class AuthModel: ObservableObject {
                 return
             }
             guard let data = result?.data() else { return }
-            print("test \(data)")
+//            print("test \(data)")
             let user = User(dictionary: data)
             self.userType = user.type
             self.fullName = user.fullName
@@ -65,7 +65,7 @@ class AuthModel: ObservableObject {
             self.id = user.id
             self.profileImageUrl = user.profileImageUrl
 //            self.userData.append(user)
-            print("DEBUG: User name \(user.type)")
+//            print("DEBUG: User name \(user.type)")
 //            print("DEBUG: User name \(String(describing: self.userData.first!.fullName))")
         }
     }

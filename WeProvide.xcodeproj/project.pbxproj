@@ -23,6 +23,7 @@
 		047513372643798A003CD344 /* ProviderSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047513362643798A003CD344 /* ProviderSearchView.swift */; };
 		0475133A26437B2C003CD344 /* UserChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475133926437B2C003CD344 /* UserChatView.swift */; };
 		0475133D26437D91003CD344 /* UserMessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475133C26437D91003CD344 /* UserMessageInputView.swift */; };
+		047513402644D0B4003CD344 /* ConversationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475133F2644D0B3003CD344 /* ConversationsViewModel.swift */; };
 		0486C0B4260C5BC200BA6DFE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0486C0B3260C5BC200BA6DFE /* GoogleService-Info.plist */; };
 		0486C0B8260C5C4C00BA6DFE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486C0B7260C5C4C00BA6DFE /* CustomTextField.swift */; };
 		0486C0BB260C640A00BA6DFE /* CustomPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486C0BA260C640A00BA6DFE /* CustomPasswordField.swift */; };
@@ -72,6 +73,7 @@
 		047513362643798A003CD344 /* ProviderSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderSearchView.swift; sourceTree = "<group>"; };
 		0475133926437B2C003CD344 /* UserChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChatView.swift; sourceTree = "<group>"; };
 		0475133C26437D91003CD344 /* UserMessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessageInputView.swift; sourceTree = "<group>"; };
+		0475133F2644D0B3003CD344 /* ConversationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewModel.swift; sourceTree = "<group>"; };
 		0486C0B3260C5BC200BA6DFE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0486C0B7260C5C4C00BA6DFE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		0486C0BA260C640A00BA6DFE /* CustomPasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPasswordField.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				04F1DBAE263768A6009ADAE5 /* SearchViewModel.swift */,
 				047513302640A578003CD344 /* ChatViewModel.swift */,
 				047513332640AD5F003CD344 /* ProfileViewModel.swift */,
+				0475133F2644D0B3003CD344 /* ConversationsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F1DBAF263768A6009ADAE5 /* SearchViewModel.swift in Sources */,
+				047513402644D0B4003CD344 /* ConversationsViewModel.swift in Sources */,
 				0486C0B8260C5C4C00BA6DFE /* CustomTextField.swift in Sources */,
 				046746A6260C539900B396CB /* SignupCustomer.swift in Sources */,
 				04F1DB8A26324721009ADAE5 /* MessageView.swift in Sources */,

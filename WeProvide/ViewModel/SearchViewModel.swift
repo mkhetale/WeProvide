@@ -22,4 +22,9 @@ class SearchViewModel: ObservableObject {
             
         }
     }
+    
+    func filteredProviders(_ query: String) -> [User] {
+        let lowercasedQuery = query.lowercased()
+        return providers.filter({ $0.description.lowercased().contains(lowercasedQuery) || $0.email.contains(lowercasedQuery)})
+    }
 }

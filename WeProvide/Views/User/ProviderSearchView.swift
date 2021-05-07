@@ -18,7 +18,8 @@ struct ProviderSearchView: View {
                 .padding()
 
             VStack(alignment: .leading) {
-                ForEach(viewObj.providers) { provider in
+                ForEach(searchText.isEmpty ? viewObj.providers : viewObj.filteredProviders(searchText)) { provider in
+                    HStack { Spacer()}
                     NavigationLink(
                         destination: UserChatView(user: provider),
                         label: {
@@ -34,6 +35,7 @@ struct ProviderSearchView: View {
 //                    UserCell(provider: provider)
                 }
             }
+            .padding(.horizontal)
 //            .padding(.leading)
         }
     }

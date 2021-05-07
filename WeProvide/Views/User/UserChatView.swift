@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserChatView: View {
     let user: User
-    let viewModel: ChatViewModel
+    @ObservedObject var viewModel: ChatViewModel
     @State var messageText: String = ""
     
     init(user: User) {
@@ -21,7 +21,7 @@ struct UserChatView: View {
         VStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 12) {
-                    ForEach(MOCK_MESSAGES) { message in
+                    ForEach(viewModel.messages) { message in
                         MessageView(message: message)
                     }
                 }
@@ -29,8 +29,7 @@ struct UserChatView: View {
             
             UserMessageInputView(messageText: $messageText, action: sendMessage)
                 .padding()
-            
-        }
+        }.navigationTitle(user.fullName)
     }
     
     func sendMessage() {

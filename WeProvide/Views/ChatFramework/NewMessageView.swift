@@ -11,6 +11,8 @@ struct NewMessageView: View {
     @State var searchText = ""
     @Binding var show: Bool
     @Binding var startChar: Bool
+    @Binding var user: User?
+    @ObservedObject var viewObj = SearchViewModel()
 
     var body: some View {
         ScrollView {
@@ -18,13 +20,14 @@ struct NewMessageView: View {
                 .padding()
 
             VStack(alignment: .leading) {
-                ForEach(0..<19) { _ in
+                ForEach(searchText.isEmpty ? viewObj.providers : viewObj.filteredProviders(searchText)) { provider in
                     HStack { Spacer()}
                     Button(action: {
                         show.toggle()
                         startChar.toggle()
+                        user = provider
                     }, label: {
-                       UserCell()
+                       UserCell(provider: provider)
                     })
                 }
             }
@@ -33,8 +36,8 @@ struct NewMessageView: View {
     }
 }
 
-struct NewMessageView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewMessageView(show: .constant(true), startChar: .constant(true))
-    }
-}
+//struct NewMessageView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NewMessageView(show: .constant(true), startChar: .constant(true))
+//    }
+//}
