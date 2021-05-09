@@ -12,28 +12,30 @@ struct ContentView: View {
     var body: some View {
         Group {
             if viewModel.userSession != nil {
-                NavigationView {
-                    FeedView()
-                    TabView {
-                        FeedView()
-                            .tabItem {
-                                Image(systemName: "house")
-                                Text("Home")
-                            }
-                        ProviderSearchView()
-                            .tabItem {
-                                Image(systemName: "magnifyingglass")
-                                Text("Search")
-                            }
-                        ConversationView()
-                            .tabItem {
-                                Image(systemName: "envelope")
-                                Text("Messages")
-                            }
-                    }
-                    .navigationBarTitle("Home")
-                    .navigationBarTitleDisplayMode(.inline)
-                }
+                SideBarView()
+//                ToggleUserType()
+//                NavigationView {
+////                    FeedView()
+//                    TabView {
+//                        FeedView()
+//                            .tabItem {
+//                                Image(systemName: "house")
+//                                Text("Home")
+//                            }
+//                        ProviderSearchView()
+//                            .tabItem {
+//                                Image(systemName: "magnifyingglass")
+//                                Text("Search")
+//                            }
+//                        ConversationView()
+//                            .tabItem {
+//                                Image(systemName: "envelope")
+//                                Text("Messages")
+//                            }
+//                    }
+//                    .navigationBarTitle("Home")
+//                    .navigationBarTitleDisplayMode(.inline)
+//                }
             } else {
                 LoginView()
             }

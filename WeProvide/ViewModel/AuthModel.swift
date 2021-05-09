@@ -12,18 +12,18 @@ class AuthModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var isAuthenticating = false
     @Published var error: Error?
-    //@Published var user: FirebaseAuth.User?
     @Published var userType = ""
-//    @Published var userData = [User]()
     @Published var fullName = ""
     @Published var email = ""
     @Published var description = ""
     @Published var profileImageUrl = ""
     @Published var id = ""
+//    @Published var user: User?
     
     init() {
         userSession = Auth.auth().currentUser
         fetchUser()
+        fetchProvider()
     }
     
     func login(withEmail email:String, password:String) {
@@ -34,39 +34,59 @@ class AuthModel: ObservableObject {
             }
             self.userSession = result?.user
             print("DEBUG: Successfully logged in")
-//            let currentUser = self.userSession
-//            print("testing")
-//            print(currentUser)
-            //self.userData = currentUser as? User
             self.fetchUser()
+            self.fetchProvider()
         }
     }
     
     func signOut() {
         userSession = nil
+        userType = ""
+        fullName = ""
+        email = ""
+        description = ""
+        profileImageUrl = ""
+        id = ""
         try? Auth.auth().signOut()
     }
     
-    func fetchUser() {
+    func fetchProvider() {
         guard let uid = userSession?.uid else { return }
-//        print("DEBUG\(uid)")
-        Firestore.firestore().collection("users").document(uid).getDocument { result, error in
+        Firestore.firestore().collection("providers").document(uid).getDocument { result, error in
             if let error = error {
+//                self.fetchProvider()
                 print("Failed to fetch data \(error.localizedDescription)")
                 return
             }
             guard let data = result?.data() else { return }
-//            print("test \(data)")
             let user = User(dictionary: data)
+//            self.user = User(dictionary: data)
             self.userType = user.type
             self.fullName = user.fullName
             self.description = user.description
             self.email = user.email
             self.id = user.id
             self.profileImageUrl = user.profileImageUrl
-//            self.userData.append(user)
-//            print("DEBUG: User name \(user.type)")
-//            print("DEBUG: User name \(String(describing: self.userData.first!.fullName))")
+        }
+    }
+    
+    func fetchUser() {
+        guard let uid = userSession?.uid else { return }
+        Firestore.firestore().collection("users").document(uid).getDocument { result, error in
+            if let error = error {
+//                self.fetchProvider()
+                print("Failed to fetch data \(error.localizedDescription)")
+                return
+            }
+            guard let data = result?.data() else { return }
+            let user = User(dictionary: data)
+//            self.user = User(dictionary: data)
+            self.userType = user.type
+            self.fullName = user.fullName
+            self.description = user.description
+            self.email = user.email
+            self.id = user.id
+            self.profileImageUrl = user.profileImageUrl
         }
     }
     

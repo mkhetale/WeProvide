@@ -9,9 +9,11 @@ import SwiftUI
 import Kingfisher
 
 struct QuoteView: View {
-    @State var description = ""
+    @State var caption = ""
+    @State var price = ""
     @Binding var show: Bool
     @Binding var provider: User
+    @ObservedObject var viewModel = UploadQuoteViewModel()
     var body: some View {
         VStack {
             KFImage(URL(string: provider.profileImageUrl))
@@ -31,21 +33,22 @@ struct QuoteView: View {
                 .font(.subheadline)
             Text("Enter Description of the task")
                 .padding(.top,30)
-            TextEditor(text: $description)
+            TextEditor(text: $caption)
                 .foregroundColor(.black)
 //                .padding(.top, 30)
                 .frame(width: 350, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-//            CustomTextField(text: $description, placeholder: Text("Enter Description of task"), imageName: "square.and.pencil")
-//                .padding()
-//                .background(Color(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)))
-//                .cornerRadius(10)
-//                .padding()
-//                .foregroundColor(.black)
+            CustomTextField(text: $price, placeholder: Text("Request amount"), imageName: "dollarsign.circle")
+                .padding()
+                .background(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
+                .cornerRadius(10)
+                .padding()
+                .foregroundColor(.white)
             Button(action: {
+                viewModel.uploadQuote(caption: caption, pid: provider.id, price: price)
                 show.toggle()
             }, label: {
-                Text("Working")
+                Text("Get a Quote")
             })
             Spacer()
         }

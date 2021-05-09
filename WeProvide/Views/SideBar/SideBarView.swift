@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct SideBarView: View {
     var body: some View {
@@ -24,6 +25,7 @@ struct Home: View {
     @State var width = UIScreen.main.bounds.width
     @State var show = false
     @State var selectedIndex = ""
+    @EnvironmentObject var viewModel: AuthModel
     
     var body: some View {
         ZStack {
@@ -42,14 +44,14 @@ struct Home: View {
                                 show.toggle()
                             }
                         }, label: {
-                            Image("batman")
+                            KFImage(URL(string: viewModel.profileImageUrl))
                                 .resizable()
                                 .renderingMode(.original)
                                 .frame(width: 50, height: 50)
                                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                         })
                     }
-                    Text("Home")
+                    Text("WeProvide")
                         .font(.title2)
                         .fontWeight(.semibold)
                 }
@@ -57,14 +59,11 @@ struct Home: View {
 //                .padding(.top, -80)
                 .background(Color.white)
                 .shadow(color: Color/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.1), radius: 5, x: 0, y: 5)
-                Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
-//                UserProfile()
-//                ProviderListView()
-//                Text(selectedIndex)
 //                Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
+                ToggleUserType()
+                Spacer(minLength: 0)
                 
             }
-//            .padding(.top,-50)
             
             HStack(spacing: 0) {
                 Spacer()
@@ -85,15 +84,15 @@ struct Home: View {
                     .padding()
                     
                     HStack(spacing: 15) {
-                        Image("batman")
+                        KFImage(URL(string: viewModel.profileImageUrl))
                             .resizable()
                             .frame(width: 75, height: 75)
                             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                         VStack(alignment: .leading, content: {
-                            Text("Testing")
+                            Text(viewModel.fullName)
                                 .font(.title)
                                 .fontWeight(.semibold)
-                            Text("test@testing.com")
+                            Text(viewModel.email)
                         })
                         .foregroundColor(.white)
                         Spacer()
@@ -102,9 +101,7 @@ struct Home: View {
                     
                     //Menu Buttons
                     VStack(alignment: .leading, spacing:5,  content: {
-                        MenuButtons(image: "gear", title: "Setting", selected: $selectedIndex, show: $show)
-                        MenuButtons(image: "gear", title: "Setting", selected: $selectedIndex, show: $show)
-                        MenuButtons(image: "gear", title: "Setting", selected: $selectedIndex, show: $show)
+                        MenuButtons(image: "power", title: "Logout", selected: $selectedIndex, show: $show)
                     })
                     .padding(.top)
                     .padding(.leading,100)
@@ -124,6 +121,7 @@ struct Home: View {
 struct MenuButtons: View {
     var image: String
     var title: String
+    @EnvironmentObject var viewModel: AuthModel
     @Binding var selected: String
     @Binding var show: Bool
     
@@ -132,6 +130,7 @@ struct MenuButtons: View {
             withAnimation(.spring()) {
                 selected = title
                 show.toggle()
+                viewModel.signOut()
             }
         }, label: {
             HStack(spacing: 15) {

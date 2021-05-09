@@ -26,6 +26,7 @@ struct UserProfile: View {
                 .font(.subheadline)
 //            Spacer()
         }
+        .padding(.top,20)
         
         
     }

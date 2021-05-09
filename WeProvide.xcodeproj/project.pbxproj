@@ -24,6 +24,15 @@
 		0475133A26437B2C003CD344 /* UserChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475133926437B2C003CD344 /* UserChatView.swift */; };
 		0475133D26437D91003CD344 /* UserMessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475133C26437D91003CD344 /* UserMessageInputView.swift */; };
 		047513402644D0B4003CD344 /* ConversationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475133F2644D0B3003CD344 /* ConversationsViewModel.swift */; };
+		047513532645F16C003CD344 /* UserHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047513522645F16C003CD344 /* UserHome.swift */; };
+		047513562645F243003CD344 /* ProviderHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047513552645F243003CD344 /* ProviderHome.swift */; };
+		047513592645F2CF003CD344 /* ToggleUserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047513582645F2CF003CD344 /* ToggleUserType.swift */; };
+		0475135E264613CE003CD344 /* ProvidersConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475135D264613CE003CD344 /* ProvidersConversationView.swift */; };
+		0475136126473D3B003CD344 /* UploadQuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475136026473D3B003CD344 /* UploadQuoteViewModel.swift */; };
+		0475136D26475740003CD344 /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475136C26475740003CD344 /* QuoteModel.swift */; };
+		0475137126475870003CD344 /* FetchQuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475137026475870003CD344 /* FetchQuotesViewModel.swift */; };
+		047513772647595E003CD344 /* QuoteFeedProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047513762647595E003CD344 /* QuoteFeedProviderView.swift */; };
+		0475137F264759B0003CD344 /* QuoteFeedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475137E264759B0003CD344 /* QuoteFeedCellView.swift */; };
 		0486C0B4260C5BC200BA6DFE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0486C0B3260C5BC200BA6DFE /* GoogleService-Info.plist */; };
 		0486C0B8260C5C4C00BA6DFE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486C0B7260C5C4C00BA6DFE /* CustomTextField.swift */; };
 		0486C0BB260C640A00BA6DFE /* CustomPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486C0BA260C640A00BA6DFE /* CustomPasswordField.swift */; };
@@ -74,6 +83,15 @@
 		0475133926437B2C003CD344 /* UserChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChatView.swift; sourceTree = "<group>"; };
 		0475133C26437D91003CD344 /* UserMessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessageInputView.swift; sourceTree = "<group>"; };
 		0475133F2644D0B3003CD344 /* ConversationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewModel.swift; sourceTree = "<group>"; };
+		047513522645F16C003CD344 /* UserHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHome.swift; sourceTree = "<group>"; };
+		047513552645F243003CD344 /* ProviderHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderHome.swift; sourceTree = "<group>"; };
+		047513582645F2CF003CD344 /* ToggleUserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleUserType.swift; sourceTree = "<group>"; };
+		0475135D264613CE003CD344 /* ProvidersConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersConversationView.swift; sourceTree = "<group>"; };
+		0475136026473D3B003CD344 /* UploadQuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadQuoteViewModel.swift; sourceTree = "<group>"; };
+		0475136C26475740003CD344 /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
+		0475137026475870003CD344 /* FetchQuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchQuotesViewModel.swift; sourceTree = "<group>"; };
+		047513762647595E003CD344 /* QuoteFeedProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteFeedProviderView.swift; sourceTree = "<group>"; };
+		0475137E264759B0003CD344 /* QuoteFeedCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteFeedCellView.swift; sourceTree = "<group>"; };
 		0486C0B3260C5BC200BA6DFE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0486C0B7260C5C4C00BA6DFE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		0486C0BA260C640A00BA6DFE /* CustomPasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPasswordField.swift; sourceTree = "<group>"; };
@@ -123,6 +141,11 @@
 			children = (
 				0403C97E2638C0E4009B3371 /* QuoteView.swift */,
 				0403C9812638F658009B3371 /* TestingView.swift */,
+				047513522645F16C003CD344 /* UserHome.swift */,
+				047513552645F243003CD344 /* ProviderHome.swift */,
+				047513582645F2CF003CD344 /* ToggleUserType.swift */,
+				047513762647595E003CD344 /* QuoteFeedProviderView.swift */,
+				0475137E264759B0003CD344 /* QuoteFeedCellView.swift */,
 			);
 			path = Quote;
 			sourceTree = "<group>";
@@ -232,6 +255,8 @@
 				047513302640A578003CD344 /* ChatViewModel.swift */,
 				047513332640AD5F003CD344 /* ProfileViewModel.swift */,
 				0475133F2644D0B3003CD344 /* ConversationsViewModel.swift */,
+				0475136026473D3B003CD344 /* UploadQuoteViewModel.swift */,
+				0475137026475870003CD344 /* FetchQuotesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -255,6 +280,7 @@
 			children = (
 				04AC596226168A1C00D4B78B /* User.swift */,
 				04F1DB862632192E009ADAE5 /* Message.swift */,
+				0475136C26475740003CD344 /* QuoteModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -272,6 +298,7 @@
 				04F1DB8326321762009ADAE5 /* ChatBubble.swift */,
 				04F1DB8926324721009ADAE5 /* MessageView.swift */,
 				04F1DB8C2632487F009ADAE5 /* NewMessageView.swift */,
+				0475135D264613CE003CD344 /* ProvidersConversationView.swift */,
 			);
 			path = ChatFramework;
 			sourceTree = "<group>";
@@ -440,11 +467,13 @@
 				046746A6260C539900B396CB /* SignupCustomer.swift in Sources */,
 				04F1DB8A26324721009ADAE5 /* MessageView.swift in Sources */,
 				04AC595F2616861D00D4B78B /* UserProfile.swift in Sources */,
+				0475136D26475740003CD344 /* QuoteModel.swift in Sources */,
 				0403C9822638F658009B3371 /* TestingView.swift in Sources */,
 				0467468B260C532800B396CB /* AppDelegate.swift in Sources */,
 				04AC597F261FC28D00D4B78B /* Quote.swift in Sources */,
 				047513312640A578003CD344 /* ChatViewModel.swift in Sources */,
 				04AC5954261566B400D4B78B /* FeedView.swift in Sources */,
+				047513772647595E003CD344 /* QuoteFeedProviderView.swift in Sources */,
 				04F1DBAC26375141009ADAE5 /* Constants.swift in Sources */,
 				04F1DB8126321595009ADAE5 /* ChatView.swift in Sources */,
 				0403C97F2638C0E4009B3371 /* QuoteView.swift in Sources */,
@@ -452,23 +481,30 @@
 				04AC5930261515BC00D4B78B /* ImagePicker.swift in Sources */,
 				0475133A26437B2C003CD344 /* UserChatView.swift in Sources */,
 				047513372643798A003CD344 /* ProviderSearchView.swift in Sources */,
+				0475137F264759B0003CD344 /* QuoteFeedCellView.swift in Sources */,
 				04F1DB7B26320674009ADAE5 /* UserCell.swift in Sources */,
 				04AC595C2616685500D4B78B /* ListCell.swift in Sources */,
 				046746A9260C53AC00B396CB /* SignupProvider.swift in Sources */,
+				047513562645F243003CD344 /* ProviderHome.swift in Sources */,
+				047513532645F16C003CD344 /* UserHome.swift in Sources */,
+				0475136126473D3B003CD344 /* UploadQuoteViewModel.swift in Sources */,
 				04F1DB752631FDB3009ADAE5 /* SearchView.swift in Sources */,
 				04F1DB872632192E009ADAE5 /* Message.swift in Sources */,
 				04AC596326168A1C00D4B78B /* User.swift in Sources */,
 				0467468D260C532800B396CB /* SceneDelegate.swift in Sources */,
+				047513592645F2CF003CD344 /* ToggleUserType.swift in Sources */,
 				04AC5983262663AA00D4B78B /* SelectUserType.swift in Sources */,
 				04F1DB9026329D5A009ADAE5 /* FeedProviderView.swift in Sources */,
 				04F1DB8426321762009ADAE5 /* ChatBubble.swift in Sources */,
 				0475133D26437D91003CD344 /* UserMessageInputView.swift in Sources */,
 				046746A2260C538300B396CB /* LoginView.swift in Sources */,
 				0486C0BB260C640A00BA6DFE /* CustomPasswordField.swift in Sources */,
+				0475135E264613CE003CD344 /* ProvidersConversationView.swift in Sources */,
 				04F1DB782631FDCD009ADAE5 /* SearchBar.swift in Sources */,
 				0467468F260C532800B396CB /* ContentView.swift in Sources */,
 				04AC59502615294E00D4B78B /* AuthModel.swift in Sources */,
 				047513342640AD5F003CD344 /* ProfileViewModel.swift in Sources */,
+				0475137126475870003CD344 /* FetchQuotesViewModel.swift in Sources */,
 				04AC5959261663F900D4B78B /* ProviderListView.swift in Sources */,
 				04F1DB7E26320E1E009ADAE5 /* MessageInputView.swift in Sources */,
 				04F1DBB32637CFC2009ADAE5 /* SideBarView.swift in Sources */,

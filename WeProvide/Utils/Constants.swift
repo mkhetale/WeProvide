@@ -10,4 +10,5 @@ import Firebase
 let COLLECTION_USERS = Firestore.firestore().collection("users")
 let COLLECTION_PROVIDERS = Firestore.firestore().collection("providers")
 let COLLECTION_MESSAGES = Firestore.firestore().collection("messages")
+let COLLECTION_QUOTE = Firestore.firestore().collection("quotes")
 

@@ -9,7 +9,7 @@ import SwiftUI
 import Firebase
 
 class ChatViewModel: ObservableObject {
-//    @EnvironmentObject var viewModel: AuthModel
+    @EnvironmentObject var viewModel: AuthModel
     let user: User
     @Published var messages = [Message]()
     
@@ -18,6 +18,7 @@ class ChatViewModel: ObservableObject {
         fetchMessages()
     }
     func fetchMessages() {
+//        print(viewModel.userType)
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let query = COLLECTION_MESSAGES.document(uid).collection(user.id)
         query.order(by: "timestamp", descending: true)
@@ -33,6 +34,20 @@ class ChatViewModel: ObservableObject {
                     self.messages.append(Message(user: user, dictionary: messageData))
                     
                 }
+                COLLECTION_PROVIDERS.document(fromId).getDocument { snapshot, _ in
+                    guard let data = snapshot?.data() else { return }
+                    let user = User(dictionary: data)
+                    self.messages.append(Message(user: user, dictionary: messageData))
+                    
+                }
+                print("test1")
+                print(self.messages)
+//                self.messages = self.messages.sorted(by: { $0.timestamp < $1.timestamp})
+//                self.messages.sorted(by: { $0.timestamp > $1.timestamp })
+                self.messages = self.messages.sorted(by: { $0.timestamp.compare($1.timestamp) == .orderedDescending})
+                print("test2")
+                print(self.messages)
+//                self.recentMessages.order(by: "timestamp", descending: true)
                 
             }
         }

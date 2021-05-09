@@ -11,8 +11,12 @@ import Kingfisher
 struct ListCell: View {
     @State var isShowingQuoteView = false
     @State var provider: User
+    @State var showChat = false
     var body: some View {
         VStack(alignment: .leading) {
+            NavigationLink(destination: UserChatView(user: provider),
+                           isActive: $showChat,
+                           label: {} )
             HStack(alignment: .top, spacing: 12) {
                 KFImage(URL(string: provider.profileImageUrl))
                     .resizable()
@@ -29,8 +33,15 @@ struct ListCell: View {
                 .padding(.trailing)
             }
             HStack {
-//                Text("$$")
-//                    .padding()
+                Button(action: { showChat.toggle()}, label: {
+                    Text("Send Message")
+                })
+                .font(.headline)
+                .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                .frame(width: 140, height: 30)
+                .background(Color(#colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)))
+                .cornerRadius(25)
+                .padding(.horizontal)
                 Spacer()
                 Button(action: {
                     isShowingQuoteView.toggle()
@@ -38,9 +49,9 @@ struct ListCell: View {
                     Text("Get a quote")
                 })
                 .font(.headline)
-                .foregroundColor(Color(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)))
-                .frame(width: 100, height: 20)
-                .background(Color.white)
+                .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                .frame(width: 120, height: 30)
+                .background(Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)))
                 .cornerRadius(25)
                 .padding(.horizontal)
                 .sheet(isPresented: $isShowingQuoteView, content: {
@@ -49,6 +60,7 @@ struct ListCell: View {
             }
            Divider()
         }
+        .padding(.bottom)
     }
 }
 
