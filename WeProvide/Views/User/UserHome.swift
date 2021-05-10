@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserHome: View {
     var body: some View {
-//        NavigationView {
+        NavigationView {
 //                    FeedView()
             TabView {
                 FeedView()
@@ -28,11 +28,14 @@ struct UserHome: View {
                         Text("Messages")
                     }
             }
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
 //            .padding(.top,-100)
 //            .padding(.bottom, 1)
 //            .navigationBarTitle("Home")
 //            .navigationBarTitleDisplayMode(.inline)
-//        }
+        }
 //        .padding(.top, -50)
     }
 }

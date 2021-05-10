@@ -14,13 +14,19 @@ struct FeedView: View {
             VStack {
                 UserProfile()
                 ProviderListView()
-                Spacer()
+//                Spacer()
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
+                .navigationBarBackButtonHidden(true)
             }
         } else {
             VStack {
 //                Text("test")
                 UserProfile()
                 QuoteFeedProviderView()
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
+                .navigationBarBackButtonHidden(true)
             }
         }
         

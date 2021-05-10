@@ -46,6 +46,9 @@ struct ConversationView: View {
             .sheet(isPresented: $isShowingMessageView, content: {
                 NewMessageView(show: $isShowingMessageView, startChar: $showChat, user: $user)
             })
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
         }
     }
 }

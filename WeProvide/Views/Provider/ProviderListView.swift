@@ -22,19 +22,19 @@ struct ProviderListView: View {
                 }
                 .padding()
             }
-            Button(action: {
-                viewModel.signOut()
-            }, label: {
-                Image(systemName: "arrowshape.turn.up.left")
-                    .resizable()
-                    .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
-                    .frame(width: 32, height: 32)
-                    .padding()
-            })
-            .background(Color(.systemBlue))
-            .foregroundColor(.white)
-            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-            .padding()
+//            Button(action: {
+//                viewModel.signOut()
+//            }, label: {
+//                Image(systemName: "arrowshape.turn.up.left")
+//                    .resizable()
+//                    .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
+//                    .frame(width: 32, height: 32)
+//                    .padding()
+//            })
+//            .background(Color(.systemBlue))
+//            .foregroundColor(.white)
+//            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+//            .padding()
         }
     }
 }

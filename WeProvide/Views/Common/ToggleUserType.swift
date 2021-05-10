@@ -12,6 +12,9 @@ struct ToggleUserType: View {
     var body: some View {
         if viewModel.userType == "user" {
             UserHome()
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
+            .navigationBarHidden(true)
         } else {
             ProviderHome()
         }

@@ -28,6 +28,9 @@ struct ProviderSearchView: View {
                 }
             }
             .padding(.horizontal)
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
         }
     }
 }
