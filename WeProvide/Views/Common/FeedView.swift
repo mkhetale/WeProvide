@@ -13,8 +13,9 @@ struct FeedView: View {
         if viewModel.userType == "user" {
             VStack {
                 UserProfile()
-                ProviderListView()
-//                Spacer()
+                FilterUserFeed()
+//                ProviderListView()
+                Spacer()
                 .navigationBarTitle("")
                 .navigationBarHidden(true)
                 .navigationBarBackButtonHidden(true)
@@ -24,6 +25,7 @@ struct FeedView: View {
 //                Text("test")
                 UserProfile()
                 QuoteFeedProviderView()
+                Spacer()
                 .navigationBarTitle("")
                 .navigationBarHidden(true)
                 .navigationBarBackButtonHidden(true)

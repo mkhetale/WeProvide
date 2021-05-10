@@ -25,9 +25,10 @@ struct ListCell: View {
                     .frame(width: 70, height: 70)
                 VStack(alignment: .leading) {
                     Text(provider.fullName)
-                        .font(.system(size:14, weight: .semibold))
+                        .font(.system(size:16, weight: .semibold))
                     
                     Text(provider.description)
+                        .font(.system(size:14))
                 }
                 .padding(.bottom)
                 .padding(.trailing)

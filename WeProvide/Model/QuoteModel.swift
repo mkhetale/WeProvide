@@ -9,10 +9,10 @@ import Firebase
 
 struct QuoteModel: Identifiable {
     let id: String
-    let caption: String
+    var caption: String
     let uid: String
     let pid: String
-    let price: String
+    var price: String
     let providerPrice: String
     let providerCaption: String
 

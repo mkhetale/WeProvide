@@ -1,13 +1,13 @@
 //
-//  CustomTextField.swift
+//  CustomText.swift
 //  WeProvide
 //
-//  Created by Mihir Khetale on 3/25/21.
+//  Created by Mihir Khetale on 5/10/21.
 //
 
 import SwiftUI
 
-struct CustomTextField: View {
+struct CustomText: View {
     @Binding var text: String
     let placeholder: Text
     let imageName: String
@@ -15,7 +15,7 @@ struct CustomTextField: View {
         ZStack(alignment: .leading) {
             if text.isEmpty {
                 placeholder
-                    .foregroundColor(Color(.init(white:1, alpha:0.87)))
+                    .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
                     .padding(.leading, 40)
             }
             HStack(spacing: 16) {
@@ -29,4 +29,3 @@ struct CustomTextField: View {
         }
     }
 }
-

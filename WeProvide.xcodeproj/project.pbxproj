@@ -33,6 +33,11 @@
 		047513772647595E003CD344 /* QuoteFeedProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047513762647595E003CD344 /* QuoteFeedProviderView.swift */; };
 		0475137F264759B0003CD344 /* QuoteFeedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475137E264759B0003CD344 /* QuoteFeedCellView.swift */; };
 		047513822649A730003CD344 /* QuoteProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047513812649A72F003CD344 /* QuoteProviderView.swift */; };
+		0475138F2649C03D003CD344 /* FilterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475138E2649C03C003CD344 /* FilterButtonView.swift */; };
+		047513922649C33B003CD344 /* FilterUserFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047513912649C33B003CD344 /* FilterUserFeed.swift */; };
+		047513972649C575003CD344 /* QuoteFeedUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047513962649C575003CD344 /* QuoteFeedUserView.swift */; };
+		0475139B2649DE44003CD344 /* QuoteFeedUserCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475139A2649DE44003CD344 /* QuoteFeedUserCellView.swift */; };
+		0475139E2649EEAC003CD344 /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475139D2649EEAB003CD344 /* CustomText.swift */; };
 		0486C0B4260C5BC200BA6DFE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0486C0B3260C5BC200BA6DFE /* GoogleService-Info.plist */; };
 		0486C0B8260C5C4C00BA6DFE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486C0B7260C5C4C00BA6DFE /* CustomTextField.swift */; };
 		0486C0BB260C640A00BA6DFE /* CustomPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486C0BA260C640A00BA6DFE /* CustomPasswordField.swift */; };
@@ -89,6 +94,11 @@
 		047513762647595E003CD344 /* QuoteFeedProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteFeedProviderView.swift; sourceTree = "<group>"; };
 		0475137E264759B0003CD344 /* QuoteFeedCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteFeedCellView.swift; sourceTree = "<group>"; };
 		047513812649A72F003CD344 /* QuoteProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteProviderView.swift; sourceTree = "<group>"; };
+		0475138E2649C03C003CD344 /* FilterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonView.swift; sourceTree = "<group>"; };
+		047513912649C33B003CD344 /* FilterUserFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterUserFeed.swift; sourceTree = "<group>"; };
+		047513962649C575003CD344 /* QuoteFeedUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteFeedUserView.swift; sourceTree = "<group>"; };
+		0475139A2649DE44003CD344 /* QuoteFeedUserCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteFeedUserCellView.swift; sourceTree = "<group>"; };
+		0475139D2649EEAB003CD344 /* CustomText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomText.swift; sourceTree = "<group>"; };
 		0486C0B3260C5BC200BA6DFE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0486C0B7260C5C4C00BA6DFE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		0486C0BA260C640A00BA6DFE /* CustomPasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPasswordField.swift; sourceTree = "<group>"; };
@@ -133,10 +143,8 @@
 		0403C97D2638C0CB009B3371 /* Quote */ = {
 			isa = PBXGroup;
 			children = (
-				0403C97E2638C0E4009B3371 /* QuoteView.swift */,
-				047513762647595E003CD344 /* QuoteFeedProviderView.swift */,
-				0475137E264759B0003CD344 /* QuoteFeedCellView.swift */,
-				047513812649A72F003CD344 /* QuoteProviderView.swift */,
+				047513952649C54F003CD344 /* Provider */,
+				047513942649C54A003CD344 /* User */,
 			);
 			path = Quote;
 			sourceTree = "<group>";
@@ -236,6 +244,26 @@
 			path = Provider;
 			sourceTree = "<group>";
 		};
+		047513942649C54A003CD344 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				0403C97E2638C0E4009B3371 /* QuoteView.swift */,
+				047513962649C575003CD344 /* QuoteFeedUserView.swift */,
+				0475139A2649DE44003CD344 /* QuoteFeedUserCellView.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		047513952649C54F003CD344 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				047513762647595E003CD344 /* QuoteFeedProviderView.swift */,
+				0475137E264759B0003CD344 /* QuoteFeedCellView.swift */,
+				047513812649A72F003CD344 /* QuoteProviderView.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
 		0486C0B6260C5C2F00BA6DFE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +271,7 @@
 				0486C0B7260C5C4C00BA6DFE /* CustomTextField.swift */,
 				0486C0BA260C640A00BA6DFE /* CustomPasswordField.swift */,
 				04F1DBAB26375141009ADAE5 /* Constants.swift */,
+				0475139D2649EEAB003CD344 /* CustomText.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -286,6 +315,8 @@
 				04AC595E2616861C00D4B78B /* UserProfile.swift */,
 				04F1DB8F26329D5A009ADAE5 /* FeedProviderView.swift */,
 				047513362643798A003CD344 /* ProviderSearchView.swift */,
+				0475138E2649C03C003CD344 /* FilterButtonView.swift */,
+				047513912649C33B003CD344 /* FilterUserFeed.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -469,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F1DBAF263768A6009ADAE5 /* SearchViewModel.swift in Sources */,
+				047513972649C575003CD344 /* QuoteFeedUserView.swift in Sources */,
 				047513402644D0B4003CD344 /* ConversationsViewModel.swift in Sources */,
 				0486C0B8260C5C4C00BA6DFE /* CustomTextField.swift in Sources */,
 				046746A6260C539900B396CB /* SignupCustomer.swift in Sources */,
@@ -476,6 +508,7 @@
 				04AC595F2616861D00D4B78B /* UserProfile.swift in Sources */,
 				0475136D26475740003CD344 /* QuoteModel.swift in Sources */,
 				0467468B260C532800B396CB /* AppDelegate.swift in Sources */,
+				047513922649C33B003CD344 /* FilterUserFeed.swift in Sources */,
 				047513312640A578003CD344 /* ChatViewModel.swift in Sources */,
 				04AC5954261566B400D4B78B /* FeedView.swift in Sources */,
 				047513772647595E003CD344 /* QuoteFeedProviderView.swift in Sources */,
@@ -510,6 +543,9 @@
 				04AC59502615294E00D4B78B /* AuthModel.swift in Sources */,
 				047513342640AD5F003CD344 /* ProfileViewModel.swift in Sources */,
 				0475137126475870003CD344 /* FetchQuotesViewModel.swift in Sources */,
+				0475139E2649EEAC003CD344 /* CustomText.swift in Sources */,
+				0475139B2649DE44003CD344 /* QuoteFeedUserCellView.swift in Sources */,
+				0475138F2649C03D003CD344 /* FilterButtonView.swift in Sources */,
 				04AC5959261663F900D4B78B /* ProviderListView.swift in Sources */,
 				04F1DBB32637CFC2009ADAE5 /* SideBarView.swift in Sources */,
 				04F1DB6E2631D54B009ADAE5 /* ConversationView.swift in Sources */,

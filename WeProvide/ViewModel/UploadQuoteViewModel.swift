@@ -24,4 +24,19 @@ class UploadQuoteViewModel: ObservableObject {
             print("DEBUG: uploadquotefilter")
         }
     }
+    func updateQuote(providerPrice: String, providerCaption: String, quote: QuoteModel, price: String, caption: String) {
+        let docRef = COLLECTION_QUOTE.document(quote.id)
+        docRef.updateData([
+            "providerPrice": providerPrice,
+            "providerCaption": providerCaption,
+            "caption": caption,
+            "price": price
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document successfully updated")
+            }
+    }
+}
 }

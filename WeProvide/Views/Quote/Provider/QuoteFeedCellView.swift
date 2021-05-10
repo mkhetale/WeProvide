@@ -22,11 +22,29 @@ struct QuoteFeedCellView: View {
                     
                     HStack {
                         Text("Description of the task:")
+                            .lineLimit(nil)
                         Text(quote.caption)
                             .lineLimit(nil)
                     }
+                    Divider()
+                    if((quote.providerCaption) != "") {
+                        HStack {
+                            Text("Description requested by you:")
+                            Text(quote.providerCaption)
+                                .lineLimit(nil)
+                        }
+                    }
+                    if((quote.providerPrice) != "") {
+                        HStack {
+                            Text("Price Requested by you:")
+                            Text(quote.providerPrice)
+                                .lineLimit(nil)
+                        }
+                    }
+                    
                     HStack {
                         Button(action: {
+                            isShowingQuoteView.toggle()
                         }, label: {
                             Text("Update Quote")
                         })
@@ -35,6 +53,9 @@ struct QuoteFeedCellView: View {
                         .background(Color.white)
                         .cornerRadius(25)
                         .padding(.top)
+                        .sheet(isPresented: $isShowingQuoteView, content: {
+                            QuoteProviderView(show: $isShowingQuoteView, quote: $quote)
+                        })
                     }
                 }
             }
