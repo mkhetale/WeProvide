@@ -28,8 +28,8 @@ struct UserHome: View {
                         Text("Messages")
                     }
             }
-            .padding(.top,-100)
-            .padding(.bottom, 1)
+//            .padding(.top,-100)
+//            .padding(.bottom, 1)
 //            .navigationBarTitle("Home")
 //            .navigationBarTitleDisplayMode(.inline)
         }
