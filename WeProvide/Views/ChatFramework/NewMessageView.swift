@@ -35,9 +35,3 @@ struct NewMessageView: View {
         }
     }
 }
-
-//struct NewMessageView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NewMessageView(show: .constant(true), startChar: .constant(true))
-//    }
-//}

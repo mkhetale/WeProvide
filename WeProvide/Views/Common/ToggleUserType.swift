@@ -12,7 +12,6 @@ struct ToggleUserType: View {
     var body: some View {
         if viewModel.userType == "user" {
             UserHome()
-//            Text("testing2")
         } else {
             ProviderHome()
         }

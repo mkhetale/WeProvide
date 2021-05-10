@@ -12,16 +12,9 @@ struct ConversationView: View {
     @State var showChat = false
     @State var user: User?
     @ObservedObject var viewModel = ConversationsViewModel()
-    //    @EnvironmentObject var viewModel: AuthModel
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
-//            NavigationLink(
-//                destination: ChatView(),
-//                isActive: $showChat,
-//                label: {
-//                    Text("")
-//                })
             if let user = user {
                 NavigationLink(destination: UserChatView(user: user),
                                isActive: $showChat,

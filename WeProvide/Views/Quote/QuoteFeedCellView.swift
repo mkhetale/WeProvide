@@ -35,21 +35,11 @@ struct QuoteFeedCellView: View {
                         .background(Color.white)
                         .cornerRadius(25)
                         .padding(.top)
-//                        .padding()
                     }
                 }
-//                .padding(.top)
-//                .padding(.bottom)
-//                .padding(.trailing)
             }
             .padding()
            Divider()
         }
     }
 }
-
-//struct QuoteFeedCellView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        QuoteFeedCellView()
-//    }
-//}

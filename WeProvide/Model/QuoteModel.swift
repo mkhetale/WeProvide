@@ -13,6 +13,8 @@ struct QuoteModel: Identifiable {
     let uid: String
     let pid: String
     let price: String
+    let providerPrice: String
+    let providerCaption: String
 
     
     init(dictionary: [String: Any]) {
@@ -21,6 +23,8 @@ struct QuoteModel: Identifiable {
         self.uid = dictionary["uid"] as? String ?? ""
         self.pid = dictionary["pid"] as? String ?? ""
         self.price = dictionary["price"] as? String ?? ""
+        self.providerPrice = dictionary["providerPrice"] as? String ?? ""
+        self.providerCaption = dictionary["providerCaption"] as? String ?? ""
     }
 }
 

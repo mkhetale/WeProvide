@@ -63,9 +63,3 @@ struct ListCell: View {
         .padding(.bottom)
     }
 }
-
-//struct ListCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ListCell()
-//    }
-//}

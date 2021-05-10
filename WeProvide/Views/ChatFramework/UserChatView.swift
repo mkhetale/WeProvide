@@ -37,9 +37,3 @@ struct UserChatView: View {
         messageText = ""
     }
 }
-
-//struct UserChatView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        UserChatView()
-//    }
-//}

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0403C97F2638C0E4009B3371 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403C97E2638C0E4009B3371 /* QuoteView.swift */; };
-		0403C9822638F658009B3371 /* TestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403C9812638F658009B3371 /* TestingView.swift */; };
 		0467468B260C532800B396CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467468A260C532800B396CB /* AppDelegate.swift */; };
 		0467468D260C532800B396CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467468C260C532800B396CB /* SceneDelegate.swift */; };
 		0467468F260C532800B396CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467468E260C532800B396CB /* ContentView.swift */; };
@@ -33,6 +32,7 @@
 		0475137126475870003CD344 /* FetchQuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475137026475870003CD344 /* FetchQuotesViewModel.swift */; };
 		047513772647595E003CD344 /* QuoteFeedProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047513762647595E003CD344 /* QuoteFeedProviderView.swift */; };
 		0475137F264759B0003CD344 /* QuoteFeedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475137E264759B0003CD344 /* QuoteFeedCellView.swift */; };
+		047513822649A730003CD344 /* QuoteProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047513812649A72F003CD344 /* QuoteProviderView.swift */; };
 		0486C0B4260C5BC200BA6DFE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0486C0B3260C5BC200BA6DFE /* GoogleService-Info.plist */; };
 		0486C0B8260C5C4C00BA6DFE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486C0B7260C5C4C00BA6DFE /* CustomTextField.swift */; };
 		0486C0BB260C640A00BA6DFE /* CustomPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0486C0BA260C640A00BA6DFE /* CustomPasswordField.swift */; };
@@ -43,15 +43,12 @@
 		04AC595C2616685500D4B78B /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC595B2616685500D4B78B /* ListCell.swift */; };
 		04AC595F2616861D00D4B78B /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC595E2616861C00D4B78B /* UserProfile.swift */; };
 		04AC596326168A1C00D4B78B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC596226168A1C00D4B78B /* User.swift */; };
-		04AC597F261FC28D00D4B78B /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC597E261FC28D00D4B78B /* Quote.swift */; };
 		04AC5983262663AA00D4B78B /* SelectUserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC5982262663AA00D4B78B /* SelectUserType.swift */; };
 		04F1DB6E2631D54B009ADAE5 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DB6D2631D54B009ADAE5 /* ConversationView.swift */; };
 		04F1DB722631D558009ADAE5 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DB712631D558009ADAE5 /* ConversationCell.swift */; };
 		04F1DB752631FDB3009ADAE5 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DB742631FDB3009ADAE5 /* SearchView.swift */; };
 		04F1DB782631FDCD009ADAE5 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DB772631FDCD009ADAE5 /* SearchBar.swift */; };
 		04F1DB7B26320674009ADAE5 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DB7A26320674009ADAE5 /* UserCell.swift */; };
-		04F1DB7E26320E1E009ADAE5 /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DB7D26320E1E009ADAE5 /* MessageInputView.swift */; };
-		04F1DB8126321595009ADAE5 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DB8026321595009ADAE5 /* ChatView.swift */; };
 		04F1DB8426321762009ADAE5 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DB8326321762009ADAE5 /* ChatBubble.swift */; };
 		04F1DB872632192E009ADAE5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DB862632192E009ADAE5 /* Message.swift */; };
 		04F1DB8A26324721009ADAE5 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1DB8926324721009ADAE5 /* MessageView.swift */; };
@@ -65,7 +62,6 @@
 
 /* Begin PBXFileReference section */
 		0403C97E2638C0E4009B3371 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
-		0403C9812638F658009B3371 /* TestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingView.swift; sourceTree = "<group>"; };
 		04674687260C532800B396CB /* WeProvide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeProvide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0467468A260C532800B396CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0467468C260C532800B396CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +88,7 @@
 		0475137026475870003CD344 /* FetchQuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchQuotesViewModel.swift; sourceTree = "<group>"; };
 		047513762647595E003CD344 /* QuoteFeedProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteFeedProviderView.swift; sourceTree = "<group>"; };
 		0475137E264759B0003CD344 /* QuoteFeedCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteFeedCellView.swift; sourceTree = "<group>"; };
+		047513812649A72F003CD344 /* QuoteProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteProviderView.swift; sourceTree = "<group>"; };
 		0486C0B3260C5BC200BA6DFE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0486C0B7260C5C4C00BA6DFE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		0486C0BA260C640A00BA6DFE /* CustomPasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPasswordField.swift; sourceTree = "<group>"; };
@@ -102,15 +99,12 @@
 		04AC595B2616685500D4B78B /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		04AC595E2616861C00D4B78B /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		04AC596226168A1C00D4B78B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		04AC597E261FC28D00D4B78B /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		04AC5982262663AA00D4B78B /* SelectUserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUserType.swift; sourceTree = "<group>"; };
 		04F1DB6D2631D54B009ADAE5 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		04F1DB712631D558009ADAE5 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		04F1DB742631FDB3009ADAE5 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		04F1DB772631FDCD009ADAE5 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		04F1DB7A26320674009ADAE5 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
-		04F1DB7D26320E1E009ADAE5 /* MessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
-		04F1DB8026321595009ADAE5 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		04F1DB8326321762009ADAE5 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		04F1DB862632192E009ADAE5 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		04F1DB8926324721009ADAE5 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
@@ -140,12 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				0403C97E2638C0E4009B3371 /* QuoteView.swift */,
-				0403C9812638F658009B3371 /* TestingView.swift */,
-				047513522645F16C003CD344 /* UserHome.swift */,
-				047513552645F243003CD344 /* ProviderHome.swift */,
-				047513582645F2CF003CD344 /* ToggleUserType.swift */,
 				047513762647595E003CD344 /* QuoteFeedProviderView.swift */,
 				0475137E264759B0003CD344 /* QuoteFeedCellView.swift */,
+				047513812649A72F003CD344 /* QuoteProviderView.swift */,
 			);
 			path = Quote;
 			sourceTree = "<group>";
@@ -197,11 +188,11 @@
 		0467469F260C535E00B396CB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				047513852649A7E8003CD344 /* Common */,
 				0403C97D2638C0CB009B3371 /* Quote */,
-				04F1DBB12637CFB0009ADAE5 /* SideBar */,
 				04F1DB6C2631D516009ADAE5 /* ChatFramework */,
 				04AC59522615669800D4B78B /* User */,
-				04AC59322615242F00D4B78B /* ProviderList */,
+				04AC59322615242F00D4B78B /* Provider */,
 				046746A0260C536D00B396CB /* Authentication */,
 				0467468E260C532800B396CB /* ContentView.swift */,
 			);
@@ -217,6 +208,32 @@
 				04AC5982262663AA00D4B78B /* SelectUserType.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		047513852649A7E8003CD344 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				047513582645F2CF003CD344 /* ToggleUserType.swift */,
+				04F1DBB22637CFC2009ADAE5 /* SideBarView.swift */,
+				04AC5953261566B400D4B78B /* FeedView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		047513882649A8C3003CD344 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				04F1DB6D2631D54B009ADAE5 /* ConversationView.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		047513892649A8C9003CD344 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				0475135D264613CE003CD344 /* ProvidersConversationView.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 		0486C0B6260C5C2F00BA6DFE /* Utils */ = {
@@ -238,13 +255,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		04AC59322615242F00D4B78B /* ProviderList */ = {
+		04AC59322615242F00D4B78B /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				047513552645F243003CD344 /* ProviderHome.swift */,
 				04AC5958261663F900D4B78B /* ProviderListView.swift */,
 				04AC595B2616685500D4B78B /* ListCell.swift */,
 			);
-			path = ProviderList;
+			path = Provider;
 			sourceTree = "<group>";
 		};
 		04AC594E2615293C00D4B78B /* ViewModel */ = {
@@ -264,13 +282,10 @@
 		04AC59522615669800D4B78B /* User */ = {
 			isa = PBXGroup;
 			children = (
-				04AC5953261566B400D4B78B /* FeedView.swift */,
+				047513522645F16C003CD344 /* UserHome.swift */,
 				04AC595E2616861C00D4B78B /* UserProfile.swift */,
-				04AC597E261FC28D00D4B78B /* Quote.swift */,
 				04F1DB8F26329D5A009ADAE5 /* FeedProviderView.swift */,
 				047513362643798A003CD344 /* ProviderSearchView.swift */,
-				0475133926437B2C003CD344 /* UserChatView.swift */,
-				0475133C26437D91003CD344 /* UserMessageInputView.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -288,27 +303,19 @@
 		04F1DB6C2631D516009ADAE5 /* ChatFramework */ = {
 			isa = PBXGroup;
 			children = (
-				04F1DB6D2631D54B009ADAE5 /* ConversationView.swift */,
+				047513892649A8C9003CD344 /* Provider */,
+				047513882649A8C3003CD344 /* User */,
 				04F1DB712631D558009ADAE5 /* ConversationCell.swift */,
 				04F1DB742631FDB3009ADAE5 /* SearchView.swift */,
 				04F1DB772631FDCD009ADAE5 /* SearchBar.swift */,
 				04F1DB7A26320674009ADAE5 /* UserCell.swift */,
-				04F1DB7D26320E1E009ADAE5 /* MessageInputView.swift */,
-				04F1DB8026321595009ADAE5 /* ChatView.swift */,
 				04F1DB8326321762009ADAE5 /* ChatBubble.swift */,
 				04F1DB8926324721009ADAE5 /* MessageView.swift */,
 				04F1DB8C2632487F009ADAE5 /* NewMessageView.swift */,
-				0475135D264613CE003CD344 /* ProvidersConversationView.swift */,
+				0475133926437B2C003CD344 /* UserChatView.swift */,
+				0475133C26437D91003CD344 /* UserMessageInputView.swift */,
 			);
 			path = ChatFramework;
-			sourceTree = "<group>";
-		};
-		04F1DBB12637CFB0009ADAE5 /* SideBar */ = {
-			isa = PBXGroup;
-			children = (
-				04F1DBB22637CFC2009ADAE5 /* SideBarView.swift */,
-			);
-			path = SideBar;
 			sourceTree = "<group>";
 		};
 		748AD2393864665DAAB9C87C /* Pods */ = {
@@ -468,14 +475,12 @@
 				04F1DB8A26324721009ADAE5 /* MessageView.swift in Sources */,
 				04AC595F2616861D00D4B78B /* UserProfile.swift in Sources */,
 				0475136D26475740003CD344 /* QuoteModel.swift in Sources */,
-				0403C9822638F658009B3371 /* TestingView.swift in Sources */,
 				0467468B260C532800B396CB /* AppDelegate.swift in Sources */,
-				04AC597F261FC28D00D4B78B /* Quote.swift in Sources */,
 				047513312640A578003CD344 /* ChatViewModel.swift in Sources */,
 				04AC5954261566B400D4B78B /* FeedView.swift in Sources */,
 				047513772647595E003CD344 /* QuoteFeedProviderView.swift in Sources */,
 				04F1DBAC26375141009ADAE5 /* Constants.swift in Sources */,
-				04F1DB8126321595009ADAE5 /* ChatView.swift in Sources */,
+				047513822649A730003CD344 /* QuoteProviderView.swift in Sources */,
 				0403C97F2638C0E4009B3371 /* QuoteView.swift in Sources */,
 				04F1DB8D2632487F009ADAE5 /* NewMessageView.swift in Sources */,
 				04AC5930261515BC00D4B78B /* ImagePicker.swift in Sources */,
@@ -506,7 +511,6 @@
 				047513342640AD5F003CD344 /* ProfileViewModel.swift in Sources */,
 				0475137126475870003CD344 /* FetchQuotesViewModel.swift in Sources */,
 				04AC5959261663F900D4B78B /* ProviderListView.swift in Sources */,
-				04F1DB7E26320E1E009ADAE5 /* MessageInputView.swift in Sources */,
 				04F1DBB32637CFC2009ADAE5 /* SideBarView.swift in Sources */,
 				04F1DB6E2631D54B009ADAE5 /* ConversationView.swift in Sources */,
 				04F1DB722631D558009ADAE5 /* ConversationCell.swift in Sources */,

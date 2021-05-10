@@ -1,5 +1,5 @@
 //
-//  ProviderHome.swift
+//  UserHome.swift
 //  WeProvide
 //
 //  Created by Mihir Khetale on 5/7/21.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct ProviderHome: View {
+struct UserHome: View {
     var body: some View {
-        NavigationView {
+//        NavigationView {
 //                    FeedView()
             TabView {
                 FeedView()
@@ -17,23 +17,28 @@ struct ProviderHome: View {
                         Image(systemName: "house")
                         Text("Home")
                     }
-                ProvidersConversationView()
+                ProviderSearchView()
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Search")
+                    }
+                ConversationView()
                     .tabItem {
                         Image(systemName: "envelope")
                         Text("Messages")
                     }
             }
-//            .offset(y: 50)
 //            .padding(.top,-100)
 //            .padding(.bottom, 1)
 //            .navigationBarTitle("Home")
 //            .navigationBarTitleDisplayMode(.inline)
-        }
+//        }
+//        .padding(.top, -50)
     }
 }
 
-struct ProviderHome_Previews: PreviewProvider {
+struct UserHome_Previews: PreviewProvider {
     static var previews: some View {
-        ProviderHome()
+        UserHome()
     }
 }

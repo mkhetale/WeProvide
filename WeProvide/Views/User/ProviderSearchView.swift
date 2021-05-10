@@ -25,24 +25,9 @@ struct ProviderSearchView: View {
                         label: {
                             UserCell(provider: provider)
                         })
-//                    HStack { Spacer()}
-//                    Button(action: {
-////                        show.toggle()
-////                        startChar.toggle()
-//                    }, label: {
-//                       UserCell(provider: provider)
-//                    })
-//                    UserCell(provider: provider)
                 }
             }
             .padding(.horizontal)
-//            .padding(.leading)
         }
     }
 }
-
-//struct ProviderSearchView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ProviderSearchView()
-//    }
-//}

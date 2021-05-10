@@ -1,14 +1,15 @@
 //
-//  MessageInputView.swift
+//  UserMessageInputView.swift
 //  WeProvide
 //
-//  Created by Mihir Khetale on 4/22/21.
+//  Created by Mihir Khetale on 5/5/21.
 //
 
 import SwiftUI
 
-struct MessageInputView: View {
+struct UserMessageInputView: View {
     @Binding var messageText: String
+    var action: () -> Void
     
     var body: some View {
         VStack {
@@ -22,7 +23,7 @@ struct MessageInputView: View {
                     .textFieldStyle(PlainTextFieldStyle())
                     .frame(minHeight: 30)
                 
-                Button(action: {}) {
+                Button(action: action) {
                     Text("Send")
                         .bold()
                         .foregroundColor(.blue)
@@ -30,11 +31,5 @@ struct MessageInputView: View {
             }
             .padding(.horizontal)
         }
-    }
-}
-
-struct MessageInputView_Previews: PreviewProvider {
-    static var previews: some View {
-        MessageInputView(messageText: .constant("Message.."))
     }
 }

@@ -34,8 +34,3 @@ struct ConversationCell: View {
     }
 }
 
-//struct ConversationCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ConversationCell()
-//    }
-//}

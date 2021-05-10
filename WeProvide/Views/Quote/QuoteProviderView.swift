@@ -1,14 +1,13 @@
 //
-//  QuoteView.swift
+//  QuoteProviderView.swift
 //  WeProvide
 //
-//  Created by Mihir Khetale on 4/27/21.
+//  Created by Mihir Khetale on 5/10/21.
 //
 
 import SwiftUI
-import Kingfisher
 
-struct QuoteView: View {
+struct QuoteProviderView: View {
     @State var caption = ""
     @State var price = ""
     @Binding var show: Bool
@@ -16,21 +15,6 @@ struct QuoteView: View {
     @ObservedObject var viewModel = UploadQuoteViewModel()
     var body: some View {
         VStack {
-            KFImage(URL(string: provider.profileImageUrl))
-                .resizable()
-                .scaledToFill()
-                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                .frame(width: 140, height: 140)
-//                .padding(.top, 88)
-                .padding(.bottom, 16)
-                .shadow(color: .black, radius: 5)
-                .padding(.top,20)
-            Text( provider.fullName)
-                .font(.system(size:20, weight: .semibold))
-            Text(provider.email)
-                .font(.subheadline)
-            Text(provider.description)
-                .font(.subheadline)
             Text("Enter Description of the task")
                 .padding(.top,30)
             TextEditor(text: $caption)
@@ -52,5 +36,6 @@ struct QuoteView: View {
             })
             Spacer()
         }
+        
     }
 }
