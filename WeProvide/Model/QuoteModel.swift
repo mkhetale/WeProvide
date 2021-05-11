@@ -13,8 +13,8 @@ struct QuoteModel: Identifiable {
     let uid: String
     let pid: String
     var price: String
-    let providerPrice: String
-    let providerCaption: String
+    var providerPrice: String
+    var providerCaption: String
 
     
     init(dictionary: [String: Any]) {

@@ -15,11 +15,11 @@ struct ProvidersConversationView: View {
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
-            if let user = user {
-                NavigationLink(destination: UserChatView(user: user),
-                               isActive: $showChat,
-                               label: {} )
-            }
+//            if let user = user {
+//                NavigationLink(destination: UserChatView(user: user),
+//                               isActive: $showChat,
+//                               label: {} )
+//            }
             ScrollView {
                 VStack {
                     ForEach(viewModel.recentMessages) { message in
@@ -32,6 +32,9 @@ struct ProvidersConversationView: View {
                 }
                 .padding()
             }
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
         }
     }
 }

@@ -16,28 +16,35 @@ struct QuoteFeedCellView: View {
                 VStack(alignment: .leading) {
                     HStack {
                         Text("Price Requested ($):")
-                        Text(quote.price)
                             .font(.system(size:18, weight: .semibold))
+                        Text(quote.price)
+                            .font(.system(size:16))
                     }
                     
-                    HStack {
+                    VStack {
                         Text("Description of the task:")
+                            .font(.system(size:18, weight: .semibold))
                             .lineLimit(nil)
                         Text(quote.caption)
+                            .font(.system(size:16))
                             .lineLimit(nil)
                     }
                     Divider()
                     if((quote.providerCaption) != "") {
-                        HStack {
+                        VStack {
                             Text("Description requested by you:")
+                                .font(.system(size:18, weight: .semibold))
                             Text(quote.providerCaption)
+                                .font(.system(size:16))
                                 .lineLimit(nil)
                         }
                     }
                     if((quote.providerPrice) != "") {
                         HStack {
                             Text("Price Requested by you:")
+                                .font(.system(size:18, weight: .semibold))
                             Text(quote.providerPrice)
+                                .font(.system(size:16))
                                 .lineLimit(nil)
                         }
                     }
