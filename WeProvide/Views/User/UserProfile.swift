@@ -10,19 +10,26 @@ import Kingfisher
 
 struct UserProfile: View {
 @EnvironmentObject var viewModel: AuthModel
+@State var showEditProfile = false
     var body: some View {
         VStack {
-            KFImage(URL(string: self.viewModel.profileImageUrl))
-                .resizable()
-                .scaledToFill()
-                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                .frame(width: 140, height: 140)
-//                .padding(.top, 88)
-                .padding(.bottom, 16)
-                .shadow(color: .black, radius: 5)
-            Text( self.viewModel.fullName)
+            Button(action: {showEditProfile.toggle()}, label: {
+                KFImage(URL(string: self.viewModel.currentUser?.profileImageUrl ?? ""))
+                    .resizable()
+                    .scaledToFill()
+                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                    .frame(width: 140, height: 140)
+    //                .padding(.top, 88)
+                    .padding(.bottom, 16)
+                    .shadow(color: .black, radius: 5)
+            })
+            .sheet(isPresented: $showEditProfile, content: {
+                EditProfileView(show: $showEditProfile, user: (viewModel.currentUser)!)
+            })
+            
+            Text( self.viewModel.currentUser?.fullName ?? "")
                 .font(.system(size:20, weight: .semibold))
-            Text(self.viewModel.email)
+            Text(self.viewModel.currentUser?.email ?? "")
                 .font(.subheadline)
 //            Spacer()
         }

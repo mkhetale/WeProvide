@@ -87,19 +87,6 @@ struct SignupCustomer: View {
                     .padding(.top, 50)
                     .padding()
             })
-//            Spacer()
-            
-//                Button(action: { mode.wrappedValue.dismiss() }, label: {
-//                    HStack {
-//                        Text("Already have an account?")
-//                            .font(.system(size: 14))
-//                        
-//                        Text("Sign In")
-//                            .font(.system(size: 14, weight: .semibold))
-//                    }
-//                    .foregroundColor(.white)
-//                    .padding(.bottom, 40)
-//                })
                 Spacer()
             
             }

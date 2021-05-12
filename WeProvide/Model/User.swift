@@ -10,10 +10,10 @@ import Firebase
 struct User: Identifiable {
     let id: String
     let profileImageUrl: String
-    let fullName: String
-    let email: String
+    var fullName: String
+    var email: String
     let type: String
-    let description: String
+    var description: String
     
     var isCurrentUser: Bool { return Auth.auth().currentUser?.uid == self.id }
     

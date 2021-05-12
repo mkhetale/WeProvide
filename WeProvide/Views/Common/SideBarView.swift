@@ -46,7 +46,7 @@ struct Home: View {
                         }, label: {
                             KFImage(URL(string: viewModel.profileImageUrl))
                                 .resizable()
-                                .renderingMode(.original)
+//                                .renderingMode(.original)
                                 .frame(width: 50, height: 50)
                                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                         })

@@ -17,10 +17,17 @@ struct QuoteFeedProviderView: View {
                 VStack {
                     Text("List of Quotes")
                         .font(.system(size:22, weight: .semibold))
-                    ForEach(viewObj.quotes) { quote in
-                        QuoteFeedCellView(quote: quote)
+                    if((viewObj.quotes.count) != 0) {
+                        ForEach(viewObj.quotes) { quote in
+                            QuoteFeedCellView(quote: quote)
+                        }
+                        .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+                    } else {
+                        Text("No Quotes Available")
+                            .font(.system(size:18, weight: .semibold))
+                            .padding(.top)
                     }
-                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+                    
                 }
                 .padding()
             }        }

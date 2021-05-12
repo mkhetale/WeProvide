@@ -18,7 +18,7 @@ class AuthModel: ObservableObject {
     @Published var description = ""
     @Published var profileImageUrl = ""
     @Published var id = ""
-//    @Published var user: User?
+    @Published var currentUser: User?
     
     init() {
         userSession = Auth.auth().currentUser
@@ -60,6 +60,7 @@ class AuthModel: ObservableObject {
             }
             guard let data = result?.data() else { return }
             let user = User(dictionary: data)
+            self.currentUser = user
 //            self.user = User(dictionary: data)
             self.userType = user.type
             self.fullName = user.fullName
@@ -80,13 +81,104 @@ class AuthModel: ObservableObject {
             }
             guard let data = result?.data() else { return }
             let user = User(dictionary: data)
-//            self.user = User(dictionary: data)
+            self.currentUser = user
             self.userType = user.type
             self.fullName = user.fullName
             self.description = user.description
             self.email = user.email
             self.id = user.id
             self.profileImageUrl = user.profileImageUrl
+        }
+    }
+    
+    func updateUser(fullName: String, description: String, profileImage: UIImage) {
+        if(profileImage == nil) {
+            print("test")
+        }
+        guard let imageData = profileImage.jpegData(compressionQuality: 0.3) else { return }
+        let filename = NSUUID().uuidString
+        let storageRef = Storage.storage().reference().child(filename)
+        storageRef.putData(imageData, metadata: nil) { _, error in
+            if let error = error {
+                print("Failed to Upload Image \(error.localizedDescription)")
+                return
+            }
+            storageRef.downloadURL { url, _ in
+                guard let profileImageUrl = url?.absoluteString else { return }
+                guard let uid = Auth.auth().currentUser?.uid else { return }
+                if(self.userType == "user") {
+                    let docRef = COLLECTION_USERS.document(uid)
+                    docRef.updateData([
+                        "fullName": fullName,
+                        "description": description,
+                        "profileImageUrl": profileImageUrl
+                    ]) { err in
+                        if let err = err {
+                            print("Error updating document: \(err)")
+                        } else {
+                            self.fetchUser()
+//                            self.fetchProvider()
+                            print("Document successfully updated")
+    //                        self.viewModel.fetchUser()
+                        }
+                    }
+                } else {
+                    let docRef = COLLECTION_PROVIDERS.document(uid)
+                    docRef.updateData([
+                        "fullName": fullName,
+                        "description": description,
+                        "profileImageUrl": profileImageUrl
+                    ]) { err in
+                        if let err = err {
+                            print("Error updating document: \(err)")
+                        } else {
+//                            self.fetchUser()
+                            self.fetchProvider()
+                            print("Document successfully updated")
+    //                        self.viewModel.fetchUser()
+                        }
+                    }
+                }
+                
+                
+            }
+        }
+        
+}
+    func updateUserwithoutProfile(fullName: String, description: String) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        if(self.userType == "user") {
+            let docRef = COLLECTION_USERS.document(uid)
+            docRef.updateData([
+                "fullName": fullName,
+                "description": description,
+                "profileImageUrl": profileImageUrl
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    self.fetchUser()
+//                            self.fetchProvider()
+                    print("Document successfully updated")
+//                        self.viewModel.fetchUser()
+                }
+            }
+        } else {
+            let docRef = COLLECTION_PROVIDERS.document(uid)
+            docRef.updateData([
+                "fullName": fullName,
+                "description": description,
+                "profileImageUrl": profileImageUrl
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+//                            self.fetchUser()
+                    self.fetchProvider()
+                    print("Document successfully updated")
+//                        self.viewModel.fetchUser()
+                }
+            }
         }
     }
     
@@ -116,15 +208,11 @@ class AuthModel: ObservableObject {
                     Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
                         print("DEBUG: Successfully uploaded user data")
                         self.userSession = user
+                        self.fetchUser()
                     }
-                    
-        //            print("DEBUG: User sign up successful")
                 }
             }
-        
-            
         }
-        
     }
     func registerProvider(email: String, password: String, fullName: String, profileImage: UIImage, description: String) {
         guard let imageData = profileImage.jpegData(compressionQuality: 0.3) else { return }
@@ -153,6 +241,7 @@ class AuthModel: ObservableObject {
                     Firestore.firestore().collection("providers").document(user.uid).setData(data) { _ in
                         print("DEBUG: Successfully uploaded user data")
                         self.userSession = user
+                        self.fetchProvider()
                     }
                     
         //            print("DEBUG: User sign up successful")

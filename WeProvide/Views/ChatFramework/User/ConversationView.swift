@@ -22,12 +22,19 @@ struct ConversationView: View {
             }
             ScrollView {
                 VStack {
-                    ForEach(viewModel.recentMessages) { message in
-                        NavigationLink(
-                            destination: UserChatView(user: message.user),
-                            label: {
-                                ConversationCell(message: message)
-                            })
+                    if (viewModel.recentMessages.count != 0) {
+                        ForEach(viewModel.recentMessages) { message in
+                            NavigationLink(
+                                destination: UserChatView(user: message.user),
+                                label: {
+                                    ConversationCell(message: message)
+                                })
+                        }
+                    } else {
+                        Text("No Recent Messages")
+                            .font(.system(size:18, weight: .semibold))
+                            .padding(.top)
+
                     }
                 }
                 .padding()

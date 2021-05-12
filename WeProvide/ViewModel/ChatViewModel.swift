@@ -23,7 +23,6 @@ class ChatViewModel: ObservableObject {
             guard let snapshot = querysnapshot else { return}
             snapshot.documentChanges.forEach { (documentChange) in
                 
-                print("type: added")
                 let dict = documentChange.document.data()
                 let message = Message(user: self.user, dictionary: dict)
                 self.messages.append(message)

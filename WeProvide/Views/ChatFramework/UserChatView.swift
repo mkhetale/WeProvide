@@ -21,9 +21,16 @@ struct UserChatView: View {
         VStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 12) {
-                    ForEach(viewModel.messages) { message in
-                        MessageView(message: message)
+                    if(viewModel.messages.count != 0) {
+                        ForEach(viewModel.messages) { message in
+                            MessageView(message: message)
+                        }
+                    } else {
+                        Text("Start a conversation")
+                            .font(.system(size:18, weight: .semibold))
+                            .padding(.top)
                     }
+                    
                 }
             }.padding(.top)
             
